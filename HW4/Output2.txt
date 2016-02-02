@@ -1,0 +1,8 @@
+
+Output 2
+
+(543,(So I Married an Axe Murderer (1993),Comedy|Romance|Thriller))
+(2424,(You've Got Mail (1998),Comedy|Romance))
+(104,(Happy Gilmore (1996),Comedy))
+(3253,(Wayne's World (1992),Comedy))
+(539,(Sleepless in Seattle (1993),Comedy|Romance))

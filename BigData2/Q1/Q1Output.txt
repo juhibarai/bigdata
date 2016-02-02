@@ -1,0 +1,2044 @@
+15/10/17 18:25:44 INFO handler.ContextHandler: stopped o.e.j.s.ServletContextHandler{/storage/rdd/json,null}
+15/10/17 18:25:44 INFO handler.ContextHandler: stopped o.e.j.s.ServletContextHandler{/storage/rdd,null}
+15/10/17 18:25:44 INFO handler.ContextHandler: stopped o.e.j.s.ServletContextHandler{/storage/json,null}
+15/10/17 18:25:44 INFO handler.ContextHandler: stopped o.e.j.s.ServletContextHandler{/storage,null}
+15/10/17 18:25:44 INFO handler.ContextHandler: stopped o.e.j.s.ServletContextHandler{/stages/pool/json,null}
+15/10/17 18:25:44 INFO handler.ContextHandler: stopped o.e.j.s.ServletContextHandler{/stages/pool,null}
+15/10/17 18:25:44 INFO handler.ContextHandler: stopped o.e.j.s.ServletContextHandler{/stages/stage/json,null}
+15/10/17 18:25:44 INFO handler.ContextHandler: stopped o.e.j.s.ServletContextHandler{/stages/stage,null}
+15/10/17 18:25:44 INFO handler.ContextHandler: stopped o.e.j.s.ServletContextHandler{/stages/json,null}
+15/10/17 18:25:44 INFO handler.ContextHandler: stopped o.e.j.s.ServletContextHandler{/stages,null}
+15/10/17 18:25:44 INFO handler.ContextHandler: stopped o.e.j.s.ServletContextHandler{/jobs/job/json,null}
+15/10/17 18:25:44 INFO handler.ContextHandler: stopped o.e.j.s.ServletContextHandler{/jobs/job,null}
+15/10/17 18:25:44 INFO handler.ContextHandler: stopped o.e.j.s.ServletContextHandler{/jobs/json,null}
+15/10/17 18:25:44 INFO handler.ContextHandler: stopped o.e.j.s.ServletContextHandler{/jobs,null}
+15/10/17 18:25:44 WARN util.Utils: Service 'SparkUI' could not bind on port 4040. Attempting port 4041.
+15/10/17 18:25:44 INFO server.Server: jetty-8.y.z-SNAPSHOT
+15/10/17 18:25:44 WARN component.AbstractLifeCycle: FAILED SelectChannelConnector@0.0.0.0:4041: java.net.BindException: Address already in use
+java.net.BindException: Address already in use
+        at sun.nio.ch.Net.bind0(Native Method)
+        at sun.nio.ch.Net.bind(Net.java:444)
+        at sun.nio.ch.Net.bind(Net.java:436)
+        at sun.nio.ch.ServerSocketChannelImpl.bind(ServerSocketChannelImpl.java:214)
+        at sun.nio.ch.ServerSocketAdaptor.bind(ServerSocketAdaptor.java:74)
+        at org.eclipse.jetty.server.nio.SelectChannelConnector.open(SelectChannelConnector.java:187)
+        at org.eclipse.jetty.server.AbstractConnector.doStart(AbstractConnector.java:316)
+        at org.eclipse.jetty.server.nio.SelectChannelConnector.doStart(SelectChannelConnector.java:265)
+        at org.eclipse.jetty.util.component.AbstractLifeCycle.start(AbstractLifeCycle.java:64)
+        at org.eclipse.jetty.server.Server.doStart(Server.java:293)
+        at org.eclipse.jetty.util.component.AbstractLifeCycle.start(AbstractLifeCycle.java:64)
+        at org.apache.spark.ui.JettyUtils$.org$apache$spark$ui$JettyUtils$$connect$1(JettyUtils.scala:194)
+        at org.apache.spark.ui.JettyUtils$$anonfun$2.apply(JettyUtils.scala:204)
+        at org.apache.spark.ui.JettyUtils$$anonfun$2.apply(JettyUtils.scala:204)
+        at org.apache.spark.util.Utils$$anonfun$startServiceOnPort$1.apply$mcVI$sp(Utils.scala:1676)
+        at scala.collection.immutable.Range.foreach$mVc$sp(Range.scala:141)
+        at org.apache.spark.util.Utils$.startServiceOnPort(Utils.scala:1667)
+        at org.apache.spark.ui.JettyUtils$.startJettyServer(JettyUtils.scala:204)
+        at org.apache.spark.ui.WebUI.bind(WebUI.scala:102)
+        at org.apache.spark.SparkContext$$anonfun$10.apply(SparkContext.scala:269)
+        at org.apache.spark.SparkContext$$anonfun$10.apply(SparkContext.scala:269)
+        at scala.Option.foreach(Option.scala:236)
+        at org.apache.spark.SparkContext.<init>(SparkContext.scala:269)
+        at org.apache.spark.repl.SparkILoop.createSparkContext(SparkILoop.scala:986)
+        at $line3.$read$$iwC$$iwC.<init>(<console>:9)
+        at $line3.$read$$iwC.<init>(<console>:18)
+        at $line3.$read.<init>(<console>:20)
+        at $line3.$read$.<init>(<console>:24)
+        at $line3.$read$.<clinit>(<console>)
+        at $line3.$eval$.<init>(<console>:7)
+        at $line3.$eval$.<clinit>(<console>)
+        at $line3.$eval.$print(<console>)
+        at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+        at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:57)
+        at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+        at java.lang.reflect.Method.invoke(Method.java:606)
+        at org.apache.spark.repl.SparkIMain$ReadEvalPrint.call(SparkIMain.scala:852)
+        at org.apache.spark.repl.SparkIMain$Request.loadAndRun(SparkIMain.scala:1125)
+        at org.apache.spark.repl.SparkIMain.loadAndRunReq$1(SparkIMain.scala:674)
+        at org.apache.spark.repl.SparkIMain.interpret(SparkIMain.scala:705)
+        at org.apache.spark.repl.SparkIMain.interpret(SparkIMain.scala:669)
+        at org.apache.spark.repl.SparkILoop.reallyInterpret$1(SparkILoop.scala:828)
+        at org.apache.spark.repl.SparkILoop.interpretStartingWith(SparkILoop.scala:873)
+        at org.apache.spark.repl.SparkILoop.command(SparkILoop.scala:785)
+        at org.apache.spark.repl.SparkILoopInit$$anonfun$initializeSpark$1.apply(SparkILoopInit.scala:123)
+        at org.apache.spark.repl.SparkILoopInit$$anonfun$initializeSpark$1.apply(SparkILoopInit.scala:122)
+        at org.apache.spark.repl.SparkIMain.beQuietDuring(SparkIMain.scala:270)
+        at org.apache.spark.repl.SparkILoopInit$class.initializeSpark(SparkILoopInit.scala:122)
+        at org.apache.spark.repl.SparkILoop.initializeSpark(SparkILoop.scala:60)
+        at org.apache.spark.repl.SparkILoop$$anonfun$process$1$$anonfun$apply$mcZ$sp$5.apply$mcV$sp(SparkILoop.scala:945)
+        at org.apache.spark.repl.SparkILoopInit$class.runThunks(SparkILoopInit.scala:147)
+        at org.apache.spark.repl.SparkILoop.runThunks(SparkILoop.scala:60)
+        at org.apache.spark.repl.SparkILoopInit$class.postInitialization(SparkILoopInit.scala:106)
+        at org.apache.spark.repl.SparkILoop.postInitialization(SparkILoop.scala:60)
+        at org.apache.spark.repl.SparkILoop$$anonfun$process$1.apply$mcZ$sp(SparkILoop.scala:962)
+        at org.apache.spark.repl.SparkILoop$$anonfun$process$1.apply(SparkILoop.scala:916)
+        at org.apache.spark.repl.SparkILoop$$anonfun$process$1.apply(SparkILoop.scala:916)
+        at scala.tools.nsc.util.ScalaClassLoader$.savingContextLoader(ScalaClassLoader.scala:135)
+        at org.apache.spark.repl.SparkILoop.process(SparkILoop.scala:916)
+        at org.apache.spark.repl.SparkILoop.process(SparkILoop.scala:1011)
+        at org.apache.spark.repl.Main$.main(Main.scala:31)
+        at org.apache.spark.repl.Main.main(Main.scala)
+        at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+        at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:57)
+        at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+        at java.lang.reflect.Method.invoke(Method.java:606)
+        at org.apache.spark.deploy.SparkSubmit$.launch(SparkSubmit.scala:358)
+        at org.apache.spark.deploy.SparkSubmit$.main(SparkSubmit.scala:75)
+        at org.apache.spark.deploy.SparkSubmit.main(SparkSubmit.scala)
+15/10/17 18:25:44 WARN component.AbstractLifeCycle: FAILED org.eclipse.jetty.server.Server@213d5e91: java.net.BindException: Address already in use
+java.net.BindException: Address already in use
+        at sun.nio.ch.Net.bind0(Native Method)
+        at sun.nio.ch.Net.bind(Net.java:444)
+        at sun.nio.ch.Net.bind(Net.java:436)
+        at sun.nio.ch.ServerSocketChannelImpl.bind(ServerSocketChannelImpl.java:214)
+        at sun.nio.ch.ServerSocketAdaptor.bind(ServerSocketAdaptor.java:74)
+        at org.eclipse.jetty.server.nio.SelectChannelConnector.open(SelectChannelConnector.java:187)
+        at org.eclipse.jetty.server.AbstractConnector.doStart(AbstractConnector.java:316)
+        at org.eclipse.jetty.server.nio.SelectChannelConnector.doStart(SelectChannelConnector.java:265)
+        at org.eclipse.jetty.util.component.AbstractLifeCycle.start(AbstractLifeCycle.java:64)
+        at org.eclipse.jetty.server.Server.doStart(Server.java:293)
+        at org.eclipse.jetty.util.component.AbstractLifeCycle.start(AbstractLifeCycle.java:64)
+        at org.apache.spark.ui.JettyUtils$.org$apache$spark$ui$JettyUtils$$connect$1(JettyUtils.scala:194)
+        at org.apache.spark.ui.JettyUtils$$anonfun$2.apply(JettyUtils.scala:204)
+        at org.apache.spark.ui.JettyUtils$$anonfun$2.apply(JettyUtils.scala:204)
+        at org.apache.spark.util.Utils$$anonfun$startServiceOnPort$1.apply$mcVI$sp(Utils.scala:1676)
+        at scala.collection.immutable.Range.foreach$mVc$sp(Range.scala:141)
+        at org.apache.spark.util.Utils$.startServiceOnPort(Utils.scala:1667)
+        at org.apache.spark.ui.JettyUtils$.startJettyServer(JettyUtils.scala:204)
+        at org.apache.spark.ui.WebUI.bind(WebUI.scala:102)
+        at org.apache.spark.SparkContext$$anonfun$10.apply(SparkContext.scala:269)
+        at org.apache.spark.SparkContext$$anonfun$10.apply(SparkContext.scala:269)
+        at scala.Option.foreach(Option.scala:236)
+        at org.apache.spark.SparkContext.<init>(SparkContext.scala:269)
+        at org.apache.spark.repl.SparkILoop.createSparkContext(SparkILoop.scala:986)
+        at $line3.$read$$iwC$$iwC.<init>(<console>:9)
+        at $line3.$read$$iwC.<init>(<console>:18)
+        at $line3.$read.<init>(<console>:20)
+        at $line3.$read$.<init>(<console>:24)
+        at $line3.$read$.<clinit>(<console>)
+        at $line3.$eval$.<init>(<console>:7)
+        at $line3.$eval$.<clinit>(<console>)
+        at $line3.$eval.$print(<console>)
+        at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+        at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:57)
+        at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+        at java.lang.reflect.Method.invoke(Method.java:606)
+        at org.apache.spark.repl.SparkIMain$ReadEvalPrint.call(SparkIMain.scala:852)
+        at org.apache.spark.repl.SparkIMain$Request.loadAndRun(SparkIMain.scala:1125)
+        at org.apache.spark.repl.SparkIMain.loadAndRunReq$1(SparkIMain.scala:674)
+        at org.apache.spark.repl.SparkIMain.interpret(SparkIMain.scala:705)
+        at org.apache.spark.repl.SparkIMain.interpret(SparkIMain.scala:669)
+        at org.apache.spark.repl.SparkILoop.reallyInterpret$1(SparkILoop.scala:828)
+        at org.apache.spark.repl.SparkILoop.interpretStartingWith(SparkILoop.scala:873)
+        at org.apache.spark.repl.SparkILoop.command(SparkILoop.scala:785)
+        at org.apache.spark.repl.SparkILoopInit$$anonfun$initializeSpark$1.apply(SparkILoopInit.scala:123)
+        at org.apache.spark.repl.SparkILoopInit$$anonfun$initializeSpark$1.apply(SparkILoopInit.scala:122)
+        at org.apache.spark.repl.SparkIMain.beQuietDuring(SparkIMain.scala:270)
+        at org.apache.spark.repl.SparkILoopInit$class.initializeSpark(SparkILoopInit.scala:122)
+        at org.apache.spark.repl.SparkILoop.initializeSpark(SparkILoop.scala:60)
+        at org.apache.spark.repl.SparkILoop$$anonfun$process$1$$anonfun$apply$mcZ$sp$5.apply$mcV$sp(SparkILoop.scala:945)
+        at org.apache.spark.repl.SparkILoopInit$class.runThunks(SparkILoopInit.scala:147)
+        at org.apache.spark.repl.SparkILoop.runThunks(SparkILoop.scala:60)
+        at org.apache.spark.repl.SparkILoopInit$class.postInitialization(SparkILoopInit.scala:106)
+        at org.apache.spark.repl.SparkILoop.postInitialization(SparkILoop.scala:60)
+        at org.apache.spark.repl.SparkILoop$$anonfun$process$1.apply$mcZ$sp(SparkILoop.scala:962)
+        at org.apache.spark.repl.SparkILoop$$anonfun$process$1.apply(SparkILoop.scala:916)
+        at org.apache.spark.repl.SparkILoop$$anonfun$process$1.apply(SparkILoop.scala:916)
+        at scala.tools.nsc.util.ScalaClassLoader$.savingContextLoader(ScalaClassLoader.scala:135)
+        at org.apache.spark.repl.SparkILoop.process(SparkILoop.scala:916)
+        at org.apache.spark.repl.SparkILoop.process(SparkILoop.scala:1011)
+        at org.apache.spark.repl.Main$.main(Main.scala:31)
+        at org.apache.spark.repl.Main.main(Main.scala)
+        at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+        at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:57)
+        at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+        at java.lang.reflect.Method.invoke(Method.java:606)
+        at org.apache.spark.deploy.SparkSubmit$.launch(SparkSubmit.scala:358)
+        at org.apache.spark.deploy.SparkSubmit$.main(SparkSubmit.scala:75)
+        at org.apache.spark.deploy.SparkSubmit.main(SparkSubmit.scala)
+15/10/17 18:25:44 INFO handler.ContextHandler: stopped o.e.j.s.ServletContextHandler{/stages/stage/kill,null}
+15/10/17 18:25:44 INFO handler.ContextHandler: stopped o.e.j.s.ServletContextHandler{/,null}
+15/10/17 18:25:44 INFO handler.ContextHandler: stopped o.e.j.s.ServletContextHandler{/static,null}
+15/10/17 18:25:44 INFO handler.ContextHandler: stopped o.e.j.s.ServletContextHandler{/executors/threadDump/json,null}
+15/10/17 18:25:44 INFO handler.ContextHandler: stopped o.e.j.s.ServletContextHandler{/executors/threadDump,null}
+15/10/17 18:25:44 INFO handler.ContextHandler: stopped o.e.j.s.ServletContextHandler{/executors/json,null}
+15/10/17 18:25:44 INFO handler.ContextHandler: stopped o.e.j.s.ServletContextHandler{/executors,null}
+15/10/17 18:25:44 INFO handler.ContextHandler: stopped o.e.j.s.ServletContextHandler{/environment/json,null}
+15/10/17 18:25:44 INFO handler.ContextHandler: stopped o.e.j.s.ServletContextHandler{/environment,null}
+15/10/17 18:25:44 INFO handler.ContextHandler: stopped o.e.j.s.ServletContextHandler{/storage/rdd/json,null}
+15/10/17 18:25:44 INFO handler.ContextHandler: stopped o.e.j.s.ServletContextHandler{/storage/rdd,null}
+15/10/17 18:25:44 INFO handler.ContextHandler: stopped o.e.j.s.ServletContextHandler{/storage/json,null}
+15/10/17 18:25:44 INFO handler.ContextHandler: stopped o.e.j.s.ServletContextHandler{/storage,null}
+15/10/17 18:25:44 INFO handler.ContextHandler: stopped o.e.j.s.ServletContextHandler{/stages/pool/json,null}
+15/10/17 18:25:44 INFO handler.ContextHandler: stopped o.e.j.s.ServletContextHandler{/stages/pool,null}
+15/10/17 18:25:44 INFO handler.ContextHandler: stopped o.e.j.s.ServletContextHandler{/stages/stage/json,null}
+15/10/17 18:25:44 INFO handler.ContextHandler: stopped o.e.j.s.ServletContextHandler{/stages/stage,null}
+15/10/17 18:25:44 INFO handler.ContextHandler: stopped o.e.j.s.ServletContextHandler{/stages/json,null}
+15/10/17 18:25:44 INFO handler.ContextHandler: stopped o.e.j.s.ServletContextHandler{/stages,null}
+15/10/17 18:25:44 INFO handler.ContextHandler: stopped o.e.j.s.ServletContextHandler{/jobs/job/json,null}
+15/10/17 18:25:44 INFO handler.ContextHandler: stopped o.e.j.s.ServletContextHandler{/jobs/job,null}
+15/10/17 18:25:44 INFO handler.ContextHandler: stopped o.e.j.s.ServletContextHandler{/jobs/json,null}
+15/10/17 18:25:44 INFO handler.ContextHandler: stopped o.e.j.s.ServletContextHandler{/jobs,null}
+15/10/17 18:25:44 WARN util.Utils: Service 'SparkUI' could not bind on port 4041. Attempting port 4042.
+15/10/17 18:25:44 INFO server.Server: jetty-8.y.z-SNAPSHOT
+15/10/17 18:25:44 WARN component.AbstractLifeCycle: FAILED SelectChannelConnector@0.0.0.0:4042: java.net.BindException: Address already in use
+java.net.BindException: Address already in use
+        at sun.nio.ch.Net.bind0(Native Method)
+        at sun.nio.ch.Net.bind(Net.java:444)
+        at sun.nio.ch.Net.bind(Net.java:436)
+        at sun.nio.ch.ServerSocketChannelImpl.bind(ServerSocketChannelImpl.java:214)
+        at sun.nio.ch.ServerSocketAdaptor.bind(ServerSocketAdaptor.java:74)
+        at org.eclipse.jetty.server.nio.SelectChannelConnector.open(SelectChannelConnector.java:187)
+        at org.eclipse.jetty.server.AbstractConnector.doStart(AbstractConnector.java:316)
+        at org.eclipse.jetty.server.nio.SelectChannelConnector.doStart(SelectChannelConnector.java:265)
+        at org.eclipse.jetty.util.component.AbstractLifeCycle.start(AbstractLifeCycle.java:64)
+        at org.eclipse.jetty.server.Server.doStart(Server.java:293)
+        at org.eclipse.jetty.util.component.AbstractLifeCycle.start(AbstractLifeCycle.java:64)
+        at org.apache.spark.ui.JettyUtils$.org$apache$spark$ui$JettyUtils$$connect$1(JettyUtils.scala:194)
+        at org.apache.spark.ui.JettyUtils$$anonfun$2.apply(JettyUtils.scala:204)
+        at org.apache.spark.ui.JettyUtils$$anonfun$2.apply(JettyUtils.scala:204)
+        at org.apache.spark.util.Utils$$anonfun$startServiceOnPort$1.apply$mcVI$sp(Utils.scala:1676)
+        at scala.collection.immutable.Range.foreach$mVc$sp(Range.scala:141)
+        at org.apache.spark.util.Utils$.startServiceOnPort(Utils.scala:1667)
+        at org.apache.spark.ui.JettyUtils$.startJettyServer(JettyUtils.scala:204)
+        at org.apache.spark.ui.WebUI.bind(WebUI.scala:102)
+        at org.apache.spark.SparkContext$$anonfun$10.apply(SparkContext.scala:269)
+        at org.apache.spark.SparkContext$$anonfun$10.apply(SparkContext.scala:269)
+        at scala.Option.foreach(Option.scala:236)
+        at org.apache.spark.SparkContext.<init>(SparkContext.scala:269)
+        at org.apache.spark.repl.SparkILoop.createSparkContext(SparkILoop.scala:986)
+        at $line3.$read$$iwC$$iwC.<init>(<console>:9)
+        at $line3.$read$$iwC.<init>(<console>:18)
+        at $line3.$read.<init>(<console>:20)
+        at $line3.$read$.<init>(<console>:24)
+        at $line3.$read$.<clinit>(<console>)
+        at $line3.$eval$.<init>(<console>:7)
+        at $line3.$eval$.<clinit>(<console>)
+        at $line3.$eval.$print(<console>)
+        at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+        at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:57)
+        at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+        at java.lang.reflect.Method.invoke(Method.java:606)
+        at org.apache.spark.repl.SparkIMain$ReadEvalPrint.call(SparkIMain.scala:852)
+        at org.apache.spark.repl.SparkIMain$Request.loadAndRun(SparkIMain.scala:1125)
+        at org.apache.spark.repl.SparkIMain.loadAndRunReq$1(SparkIMain.scala:674)
+        at org.apache.spark.repl.SparkIMain.interpret(SparkIMain.scala:705)
+        at org.apache.spark.repl.SparkIMain.interpret(SparkIMain.scala:669)
+        at org.apache.spark.repl.SparkILoop.reallyInterpret$1(SparkILoop.scala:828)
+        at org.apache.spark.repl.SparkILoop.interpretStartingWith(SparkILoop.scala:873)
+        at org.apache.spark.repl.SparkILoop.command(SparkILoop.scala:785)
+        at org.apache.spark.repl.SparkILoopInit$$anonfun$initializeSpark$1.apply(SparkILoopInit.scala:123)
+        at org.apache.spark.repl.SparkILoopInit$$anonfun$initializeSpark$1.apply(SparkILoopInit.scala:122)
+        at org.apache.spark.repl.SparkIMain.beQuietDuring(SparkIMain.scala:270)
+        at org.apache.spark.repl.SparkILoopInit$class.initializeSpark(SparkILoopInit.scala:122)
+        at org.apache.spark.repl.SparkILoop.initializeSpark(SparkILoop.scala:60)
+        at org.apache.spark.repl.SparkILoop$$anonfun$process$1$$anonfun$apply$mcZ$sp$5.apply$mcV$sp(SparkILoop.scala:945)
+        at org.apache.spark.repl.SparkILoopInit$class.runThunks(SparkILoopInit.scala:147)
+        at org.apache.spark.repl.SparkILoop.runThunks(SparkILoop.scala:60)
+        at org.apache.spark.repl.SparkILoopInit$class.postInitialization(SparkILoopInit.scala:106)
+        at org.apache.spark.repl.SparkILoop.postInitialization(SparkILoop.scala:60)
+        at org.apache.spark.repl.SparkILoop$$anonfun$process$1.apply$mcZ$sp(SparkILoop.scala:962)
+        at org.apache.spark.repl.SparkILoop$$anonfun$process$1.apply(SparkILoop.scala:916)
+        at org.apache.spark.repl.SparkILoop$$anonfun$process$1.apply(SparkILoop.scala:916)
+        at scala.tools.nsc.util.ScalaClassLoader$.savingContextLoader(ScalaClassLoader.scala:135)
+        at org.apache.spark.repl.SparkILoop.process(SparkILoop.scala:916)
+        at org.apache.spark.repl.SparkILoop.process(SparkILoop.scala:1011)
+        at org.apache.spark.repl.Main$.main(Main.scala:31)
+        at org.apache.spark.repl.Main.main(Main.scala)
+        at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+        at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:57)
+        at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+        at java.lang.reflect.Method.invoke(Method.java:606)
+        at org.apache.spark.deploy.SparkSubmit$.launch(SparkSubmit.scala:358)
+        at org.apache.spark.deploy.SparkSubmit$.main(SparkSubmit.scala:75)
+        at org.apache.spark.deploy.SparkSubmit.main(SparkSubmit.scala)
+15/10/17 18:25:44 WARN component.AbstractLifeCycle: FAILED org.eclipse.jetty.server.Server@26d3ed17: java.net.BindException: Address already in use
+java.net.BindException: Address already in use
+        at sun.nio.ch.Net.bind0(Native Method)
+        at sun.nio.ch.Net.bind(Net.java:444)
+        at sun.nio.ch.Net.bind(Net.java:436)
+        at sun.nio.ch.ServerSocketChannelImpl.bind(ServerSocketChannelImpl.java:214)
+        at sun.nio.ch.ServerSocketAdaptor.bind(ServerSocketAdaptor.java:74)
+        at org.eclipse.jetty.server.nio.SelectChannelConnector.open(SelectChannelConnector.java:187)
+        at org.eclipse.jetty.server.AbstractConnector.doStart(AbstractConnector.java:316)
+        at org.eclipse.jetty.server.nio.SelectChannelConnector.doStart(SelectChannelConnector.java:265)
+        at org.eclipse.jetty.util.component.AbstractLifeCycle.start(AbstractLifeCycle.java:64)
+        at org.eclipse.jetty.server.Server.doStart(Server.java:293)
+        at org.eclipse.jetty.util.component.AbstractLifeCycle.start(AbstractLifeCycle.java:64)
+        at org.apache.spark.ui.JettyUtils$.org$apache$spark$ui$JettyUtils$$connect$1(JettyUtils.scala:194)
+        at org.apache.spark.ui.JettyUtils$$anonfun$2.apply(JettyUtils.scala:204)
+        at org.apache.spark.ui.JettyUtils$$anonfun$2.apply(JettyUtils.scala:204)
+        at org.apache.spark.util.Utils$$anonfun$startServiceOnPort$1.apply$mcVI$sp(Utils.scala:1676)
+        at scala.collection.immutable.Range.foreach$mVc$sp(Range.scala:141)
+        at org.apache.spark.util.Utils$.startServiceOnPort(Utils.scala:1667)
+        at org.apache.spark.ui.JettyUtils$.startJettyServer(JettyUtils.scala:204)
+        at org.apache.spark.ui.WebUI.bind(WebUI.scala:102)
+        at org.apache.spark.SparkContext$$anonfun$10.apply(SparkContext.scala:269)
+        at org.apache.spark.SparkContext$$anonfun$10.apply(SparkContext.scala:269)
+        at scala.Option.foreach(Option.scala:236)
+        at org.apache.spark.SparkContext.<init>(SparkContext.scala:269)
+        at org.apache.spark.repl.SparkILoop.createSparkContext(SparkILoop.scala:986)
+        at $line3.$read$$iwC$$iwC.<init>(<console>:9)
+        at $line3.$read$$iwC.<init>(<console>:18)
+        at $line3.$read.<init>(<console>:20)
+        at $line3.$read$.<init>(<console>:24)
+        at $line3.$read$.<clinit>(<console>)
+        at $line3.$eval$.<init>(<console>:7)
+        at $line3.$eval$.<clinit>(<console>)
+        at $line3.$eval.$print(<console>)
+        at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+        at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:57)
+        at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+        at java.lang.reflect.Method.invoke(Method.java:606)
+        at org.apache.spark.repl.SparkIMain$ReadEvalPrint.call(SparkIMain.scala:852)
+        at org.apache.spark.repl.SparkIMain$Request.loadAndRun(SparkIMain.scala:1125)
+        at org.apache.spark.repl.SparkIMain.loadAndRunReq$1(SparkIMain.scala:674)
+        at org.apache.spark.repl.SparkIMain.interpret(SparkIMain.scala:705)
+        at org.apache.spark.repl.SparkIMain.interpret(SparkIMain.scala:669)
+        at org.apache.spark.repl.SparkILoop.reallyInterpret$1(SparkILoop.scala:828)
+        at org.apache.spark.repl.SparkILoop.interpretStartingWith(SparkILoop.scala:873)
+        at org.apache.spark.repl.SparkILoop.command(SparkILoop.scala:785)
+        at org.apache.spark.repl.SparkILoopInit$$anonfun$initializeSpark$1.apply(SparkILoopInit.scala:123)
+        at org.apache.spark.repl.SparkILoopInit$$anonfun$initializeSpark$1.apply(SparkILoopInit.scala:122)
+        at org.apache.spark.repl.SparkIMain.beQuietDuring(SparkIMain.scala:270)
+        at org.apache.spark.repl.SparkILoopInit$class.initializeSpark(SparkILoopInit.scala:122)
+        at org.apache.spark.repl.SparkILoop.initializeSpark(SparkILoop.scala:60)
+        at org.apache.spark.repl.SparkILoop$$anonfun$process$1$$anonfun$apply$mcZ$sp$5.apply$mcV$sp(SparkILoop.scala:945)
+        at org.apache.spark.repl.SparkILoopInit$class.runThunks(SparkILoopInit.scala:147)
+        at org.apache.spark.repl.SparkILoop.runThunks(SparkILoop.scala:60)
+        at org.apache.spark.repl.SparkILoopInit$class.postInitialization(SparkILoopInit.scala:106)
+        at org.apache.spark.repl.SparkILoop.postInitialization(SparkILoop.scala:60)
+        at org.apache.spark.repl.SparkILoop$$anonfun$process$1.apply$mcZ$sp(SparkILoop.scala:962)
+        at org.apache.spark.repl.SparkILoop$$anonfun$process$1.apply(SparkILoop.scala:916)
+        at org.apache.spark.repl.SparkILoop$$anonfun$process$1.apply(SparkILoop.scala:916)
+        at scala.tools.nsc.util.ScalaClassLoader$.savingContextLoader(ScalaClassLoader.scala:135)
+        at org.apache.spark.repl.SparkILoop.process(SparkILoop.scala:916)
+        at org.apache.spark.repl.SparkILoop.process(SparkILoop.scala:1011)
+        at org.apache.spark.repl.Main$.main(Main.scala:31)
+        at org.apache.spark.repl.Main.main(Main.scala)
+        at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+        at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:57)
+        at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+        at java.lang.reflect.Method.invoke(Method.java:606)
+        at org.apache.spark.deploy.SparkSubmit$.launch(SparkSubmit.scala:358)
+        at org.apache.spark.deploy.SparkSubmit$.main(SparkSubmit.scala:75)
+        at org.apache.spark.deploy.SparkSubmit.main(SparkSubmit.scala)
+15/10/17 18:25:44 INFO handler.ContextHandler: stopped o.e.j.s.ServletContextHandler{/stages/stage/kill,null}
+15/10/17 18:25:44 INFO handler.ContextHandler: stopped o.e.j.s.ServletContextHandler{/,null}
+15/10/17 18:25:44 INFO handler.ContextHandler: stopped o.e.j.s.ServletContextHandler{/static,null}
+15/10/17 18:25:44 INFO handler.ContextHandler: stopped o.e.j.s.ServletContextHandler{/executors/threadDump/json,null}
+15/10/17 18:25:44 INFO handler.ContextHandler: stopped o.e.j.s.ServletContextHandler{/executors/threadDump,null}
+15/10/17 18:25:44 INFO handler.ContextHandler: stopped o.e.j.s.ServletContextHandler{/executors/json,null}
+15/10/17 18:25:44 INFO handler.ContextHandler: stopped o.e.j.s.ServletContextHandler{/executors,null}
+15/10/17 18:25:44 INFO handler.ContextHandler: stopped o.e.j.s.ServletContextHandler{/environment/json,null}
+15/10/17 18:25:44 INFO handler.ContextHandler: stopped o.e.j.s.ServletContextHandler{/environment,null}
+15/10/17 18:25:44 INFO handler.ContextHandler: stopped o.e.j.s.ServletContextHandler{/storage/rdd/json,null}
+15/10/17 18:25:44 INFO handler.ContextHandler: stopped o.e.j.s.ServletContextHandler{/storage/rdd,null}
+15/10/17 18:25:44 INFO handler.ContextHandler: stopped o.e.j.s.ServletContextHandler{/storage/json,null}
+15/10/17 18:25:44 INFO handler.ContextHandler: stopped o.e.j.s.ServletContextHandler{/storage,null}
+15/10/17 18:25:44 INFO handler.ContextHandler: stopped o.e.j.s.ServletContextHandler{/stages/pool/json,null}
+15/10/17 18:25:44 INFO handler.ContextHandler: stopped o.e.j.s.ServletContextHandler{/stages/pool,null}
+15/10/17 18:25:44 INFO handler.ContextHandler: stopped o.e.j.s.ServletContextHandler{/stages/stage/json,null}
+15/10/17 18:25:44 INFO handler.ContextHandler: stopped o.e.j.s.ServletContextHandler{/stages/stage,null}
+15/10/17 18:25:44 INFO handler.ContextHandler: stopped o.e.j.s.ServletContextHandler{/stages/json,null}
+15/10/17 18:25:44 INFO handler.ContextHandler: stopped o.e.j.s.ServletContextHandler{/stages,null}
+15/10/17 18:25:44 INFO handler.ContextHandler: stopped o.e.j.s.ServletContextHandler{/jobs/job/json,null}
+15/10/17 18:25:44 INFO handler.ContextHandler: stopped o.e.j.s.ServletContextHandler{/jobs/job,null}
+15/10/17 18:25:44 INFO handler.ContextHandler: stopped o.e.j.s.ServletContextHandler{/jobs/json,null}
+15/10/17 18:25:44 INFO handler.ContextHandler: stopped o.e.j.s.ServletContextHandler{/jobs,null}
+15/10/17 18:25:44 WARN util.Utils: Service 'SparkUI' could not bind on port 4042. Attempting port 4043.
+15/10/17 18:25:44 INFO server.Server: jetty-8.y.z-SNAPSHOT
+15/10/17 18:25:44 WARN component.AbstractLifeCycle: FAILED SelectChannelConnector@0.0.0.0:4043: java.net.BindException: Address already in use
+java.net.BindException: Address already in use
+        at sun.nio.ch.Net.bind0(Native Method)
+        at sun.nio.ch.Net.bind(Net.java:444)
+        at sun.nio.ch.Net.bind(Net.java:436)
+        at sun.nio.ch.ServerSocketChannelImpl.bind(ServerSocketChannelImpl.java:214)
+        at sun.nio.ch.ServerSocketAdaptor.bind(ServerSocketAdaptor.java:74)
+        at org.eclipse.jetty.server.nio.SelectChannelConnector.open(SelectChannelConnector.java:187)
+        at org.eclipse.jetty.server.AbstractConnector.doStart(AbstractConnector.java:316)
+        at org.eclipse.jetty.server.nio.SelectChannelConnector.doStart(SelectChannelConnector.java:265)
+        at org.eclipse.jetty.util.component.AbstractLifeCycle.start(AbstractLifeCycle.java:64)
+        at org.eclipse.jetty.server.Server.doStart(Server.java:293)
+        at org.eclipse.jetty.util.component.AbstractLifeCycle.start(AbstractLifeCycle.java:64)
+        at org.apache.spark.ui.JettyUtils$.org$apache$spark$ui$JettyUtils$$connect$1(JettyUtils.scala:194)
+        at org.apache.spark.ui.JettyUtils$$anonfun$2.apply(JettyUtils.scala:204)
+        at org.apache.spark.ui.JettyUtils$$anonfun$2.apply(JettyUtils.scala:204)
+        at org.apache.spark.util.Utils$$anonfun$startServiceOnPort$1.apply$mcVI$sp(Utils.scala:1676)
+        at scala.collection.immutable.Range.foreach$mVc$sp(Range.scala:141)
+        at org.apache.spark.util.Utils$.startServiceOnPort(Utils.scala:1667)
+        at org.apache.spark.ui.JettyUtils$.startJettyServer(JettyUtils.scala:204)
+        at org.apache.spark.ui.WebUI.bind(WebUI.scala:102)
+        at org.apache.spark.SparkContext$$anonfun$10.apply(SparkContext.scala:269)
+        at org.apache.spark.SparkContext$$anonfun$10.apply(SparkContext.scala:269)
+        at scala.Option.foreach(Option.scala:236)
+        at org.apache.spark.SparkContext.<init>(SparkContext.scala:269)
+        at org.apache.spark.repl.SparkILoop.createSparkContext(SparkILoop.scala:986)
+        at $line3.$read$$iwC$$iwC.<init>(<console>:9)
+        at $line3.$read$$iwC.<init>(<console>:18)
+        at $line3.$read.<init>(<console>:20)
+        at $line3.$read$.<init>(<console>:24)
+        at $line3.$read$.<clinit>(<console>)
+        at $line3.$eval$.<init>(<console>:7)
+        at $line3.$eval$.<clinit>(<console>)
+        at $line3.$eval.$print(<console>)
+        at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+        at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:57)
+        at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+        at java.lang.reflect.Method.invoke(Method.java:606)
+        at org.apache.spark.repl.SparkIMain$ReadEvalPrint.call(SparkIMain.scala:852)
+        at org.apache.spark.repl.SparkIMain$Request.loadAndRun(SparkIMain.scala:1125)
+        at org.apache.spark.repl.SparkIMain.loadAndRunReq$1(SparkIMain.scala:674)
+        at org.apache.spark.repl.SparkIMain.interpret(SparkIMain.scala:705)
+        at org.apache.spark.repl.SparkIMain.interpret(SparkIMain.scala:669)
+        at org.apache.spark.repl.SparkILoop.reallyInterpret$1(SparkILoop.scala:828)
+        at org.apache.spark.repl.SparkILoop.interpretStartingWith(SparkILoop.scala:873)
+        at org.apache.spark.repl.SparkILoop.command(SparkILoop.scala:785)
+        at org.apache.spark.repl.SparkILoopInit$$anonfun$initializeSpark$1.apply(SparkILoopInit.scala:123)
+        at org.apache.spark.repl.SparkILoopInit$$anonfun$initializeSpark$1.apply(SparkILoopInit.scala:122)
+        at org.apache.spark.repl.SparkIMain.beQuietDuring(SparkIMain.scala:270)
+        at org.apache.spark.repl.SparkILoopInit$class.initializeSpark(SparkILoopInit.scala:122)
+        at org.apache.spark.repl.SparkILoop.initializeSpark(SparkILoop.scala:60)
+        at org.apache.spark.repl.SparkILoop$$anonfun$process$1$$anonfun$apply$mcZ$sp$5.apply$mcV$sp(SparkILoop.scala:945)
+        at org.apache.spark.repl.SparkILoopInit$class.runThunks(SparkILoopInit.scala:147)
+        at org.apache.spark.repl.SparkILoop.runThunks(SparkILoop.scala:60)
+        at org.apache.spark.repl.SparkILoopInit$class.postInitialization(SparkILoopInit.scala:106)
+        at org.apache.spark.repl.SparkILoop.postInitialization(SparkILoop.scala:60)
+        at org.apache.spark.repl.SparkILoop$$anonfun$process$1.apply$mcZ$sp(SparkILoop.scala:962)
+        at org.apache.spark.repl.SparkILoop$$anonfun$process$1.apply(SparkILoop.scala:916)
+        at org.apache.spark.repl.SparkILoop$$anonfun$process$1.apply(SparkILoop.scala:916)
+        at scala.tools.nsc.util.ScalaClassLoader$.savingContextLoader(ScalaClassLoader.scala:135)
+        at org.apache.spark.repl.SparkILoop.process(SparkILoop.scala:916)
+        at org.apache.spark.repl.SparkILoop.process(SparkILoop.scala:1011)
+        at org.apache.spark.repl.Main$.main(Main.scala:31)
+        at org.apache.spark.repl.Main.main(Main.scala)
+        at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+        at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:57)
+        at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+        at java.lang.reflect.Method.invoke(Method.java:606)
+        at org.apache.spark.deploy.SparkSubmit$.launch(SparkSubmit.scala:358)
+        at org.apache.spark.deploy.SparkSubmit$.main(SparkSubmit.scala:75)
+        at org.apache.spark.deploy.SparkSubmit.main(SparkSubmit.scala)
+15/10/17 18:25:44 WARN component.AbstractLifeCycle: FAILED org.eclipse.jetty.server.Server@3c6f571e: java.net.BindException: Address already in use
+java.net.BindException: Address already in use
+        at sun.nio.ch.Net.bind0(Native Method)
+        at sun.nio.ch.Net.bind(Net.java:444)
+        at sun.nio.ch.Net.bind(Net.java:436)
+        at sun.nio.ch.ServerSocketChannelImpl.bind(ServerSocketChannelImpl.java:214)
+        at sun.nio.ch.ServerSocketAdaptor.bind(ServerSocketAdaptor.java:74)
+        at org.eclipse.jetty.server.nio.SelectChannelConnector.open(SelectChannelConnector.java:187)
+        at org.eclipse.jetty.server.AbstractConnector.doStart(AbstractConnector.java:316)
+        at org.eclipse.jetty.server.nio.SelectChannelConnector.doStart(SelectChannelConnector.java:265)
+        at org.eclipse.jetty.util.component.AbstractLifeCycle.start(AbstractLifeCycle.java:64)
+        at org.eclipse.jetty.server.Server.doStart(Server.java:293)
+        at org.eclipse.jetty.util.component.AbstractLifeCycle.start(AbstractLifeCycle.java:64)
+        at org.apache.spark.ui.JettyUtils$.org$apache$spark$ui$JettyUtils$$connect$1(JettyUtils.scala:194)
+        at org.apache.spark.ui.JettyUtils$$anonfun$2.apply(JettyUtils.scala:204)
+        at org.apache.spark.ui.JettyUtils$$anonfun$2.apply(JettyUtils.scala:204)
+        at org.apache.spark.util.Utils$$anonfun$startServiceOnPort$1.apply$mcVI$sp(Utils.scala:1676)
+        at scala.collection.immutable.Range.foreach$mVc$sp(Range.scala:141)
+        at org.apache.spark.util.Utils$.startServiceOnPort(Utils.scala:1667)
+        at org.apache.spark.ui.JettyUtils$.startJettyServer(JettyUtils.scala:204)
+        at org.apache.spark.ui.WebUI.bind(WebUI.scala:102)
+        at org.apache.spark.SparkContext$$anonfun$10.apply(SparkContext.scala:269)
+        at org.apache.spark.SparkContext$$anonfun$10.apply(SparkContext.scala:269)
+        at scala.Option.foreach(Option.scala:236)
+        at org.apache.spark.SparkContext.<init>(SparkContext.scala:269)
+        at org.apache.spark.repl.SparkILoop.createSparkContext(SparkILoop.scala:986)
+        at $line3.$read$$iwC$$iwC.<init>(<console>:9)
+        at $line3.$read$$iwC.<init>(<console>:18)
+        at $line3.$read.<init>(<console>:20)
+        at $line3.$read$.<init>(<console>:24)
+        at $line3.$read$.<clinit>(<console>)
+        at $line3.$eval$.<init>(<console>:7)
+        at $line3.$eval$.<clinit>(<console>)
+        at $line3.$eval.$print(<console>)
+        at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+        at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:57)
+        at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+        at java.lang.reflect.Method.invoke(Method.java:606)
+        at org.apache.spark.repl.SparkIMain$ReadEvalPrint.call(SparkIMain.scala:852)
+        at org.apache.spark.repl.SparkIMain$Request.loadAndRun(SparkIMain.scala:1125)
+        at org.apache.spark.repl.SparkIMain.loadAndRunReq$1(SparkIMain.scala:674)
+        at org.apache.spark.repl.SparkIMain.interpret(SparkIMain.scala:705)
+        at org.apache.spark.repl.SparkIMain.interpret(SparkIMain.scala:669)
+        at org.apache.spark.repl.SparkILoop.reallyInterpret$1(SparkILoop.scala:828)
+        at org.apache.spark.repl.SparkILoop.interpretStartingWith(SparkILoop.scala:873)
+        at org.apache.spark.repl.SparkILoop.command(SparkILoop.scala:785)
+        at org.apache.spark.repl.SparkILoopInit$$anonfun$initializeSpark$1.apply(SparkILoopInit.scala:123)
+        at org.apache.spark.repl.SparkILoopInit$$anonfun$initializeSpark$1.apply(SparkILoopInit.scala:122)
+        at org.apache.spark.repl.SparkIMain.beQuietDuring(SparkIMain.scala:270)
+        at org.apache.spark.repl.SparkILoopInit$class.initializeSpark(SparkILoopInit.scala:122)
+        at org.apache.spark.repl.SparkILoop.initializeSpark(SparkILoop.scala:60)
+        at org.apache.spark.repl.SparkILoop$$anonfun$process$1$$anonfun$apply$mcZ$sp$5.apply$mcV$sp(SparkILoop.scala:945)
+        at org.apache.spark.repl.SparkILoopInit$class.runThunks(SparkILoopInit.scala:147)
+        at org.apache.spark.repl.SparkILoop.runThunks(SparkILoop.scala:60)
+        at org.apache.spark.repl.SparkILoopInit$class.postInitialization(SparkILoopInit.scala:106)
+        at org.apache.spark.repl.SparkILoop.postInitialization(SparkILoop.scala:60)
+        at org.apache.spark.repl.SparkILoop$$anonfun$process$1.apply$mcZ$sp(SparkILoop.scala:962)
+        at org.apache.spark.repl.SparkILoop$$anonfun$process$1.apply(SparkILoop.scala:916)
+        at org.apache.spark.repl.SparkILoop$$anonfun$process$1.apply(SparkILoop.scala:916)
+        at scala.tools.nsc.util.ScalaClassLoader$.savingContextLoader(ScalaClassLoader.scala:135)
+        at org.apache.spark.repl.SparkILoop.process(SparkILoop.scala:916)
+        at org.apache.spark.repl.SparkILoop.process(SparkILoop.scala:1011)
+        at org.apache.spark.repl.Main$.main(Main.scala:31)
+        at org.apache.spark.repl.Main.main(Main.scala)
+        at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+        at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:57)
+        at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+        at java.lang.reflect.Method.invoke(Method.java:606)
+        at org.apache.spark.deploy.SparkSubmit$.launch(SparkSubmit.scala:358)
+        at org.apache.spark.deploy.SparkSubmit$.main(SparkSubmit.scala:75)
+        at org.apache.spark.deploy.SparkSubmit.main(SparkSubmit.scala)
+15/10/17 18:25:44 INFO handler.ContextHandler: stopped o.e.j.s.ServletContextHandler{/stages/stage/kill,null}
+15/10/17 18:25:44 INFO handler.ContextHandler: stopped o.e.j.s.ServletContextHandler{/,null}
+15/10/17 18:25:44 INFO handler.ContextHandler: stopped o.e.j.s.ServletContextHandler{/static,null}
+15/10/17 18:25:44 INFO handler.ContextHandler: stopped o.e.j.s.ServletContextHandler{/executors/threadDump/json,null}
+15/10/17 18:25:44 INFO handler.ContextHandler: stopped o.e.j.s.ServletContextHandler{/executors/threadDump,null}
+15/10/17 18:25:44 INFO handler.ContextHandler: stopped o.e.j.s.ServletContextHandler{/executors/json,null}
+15/10/17 18:25:44 INFO handler.ContextHandler: stopped o.e.j.s.ServletContextHandler{/executors,null}
+15/10/17 18:25:44 INFO handler.ContextHandler: stopped o.e.j.s.ServletContextHandler{/environment/json,null}
+15/10/17 18:25:44 INFO handler.ContextHandler: stopped o.e.j.s.ServletContextHandler{/environment,null}
+15/10/17 18:25:44 INFO handler.ContextHandler: stopped o.e.j.s.ServletContextHandler{/storage/rdd/json,null}
+15/10/17 18:25:44 INFO handler.ContextHandler: stopped o.e.j.s.ServletContextHandler{/storage/rdd,null}
+15/10/17 18:25:44 INFO handler.ContextHandler: stopped o.e.j.s.ServletContextHandler{/storage/json,null}
+15/10/17 18:25:44 INFO handler.ContextHandler: stopped o.e.j.s.ServletContextHandler{/storage,null}
+15/10/17 18:25:44 INFO handler.ContextHandler: stopped o.e.j.s.ServletContextHandler{/stages/pool/json,null}
+15/10/17 18:25:44 INFO handler.ContextHandler: stopped o.e.j.s.ServletContextHandler{/stages/pool,null}
+15/10/17 18:25:44 INFO handler.ContextHandler: stopped o.e.j.s.ServletContextHandler{/stages/stage/json,null}
+15/10/17 18:25:44 INFO handler.ContextHandler: stopped o.e.j.s.ServletContextHandler{/stages/stage,null}
+15/10/17 18:25:44 INFO handler.ContextHandler: stopped o.e.j.s.ServletContextHandler{/stages/json,null}
+15/10/17 18:25:44 INFO handler.ContextHandler: stopped o.e.j.s.ServletContextHandler{/stages,null}
+15/10/17 18:25:44 INFO handler.ContextHandler: stopped o.e.j.s.ServletContextHandler{/jobs/job/json,null}
+15/10/17 18:25:44 INFO handler.ContextHandler: stopped o.e.j.s.ServletContextHandler{/jobs/job,null}
+15/10/17 18:25:44 INFO handler.ContextHandler: stopped o.e.j.s.ServletContextHandler{/jobs/json,null}
+15/10/17 18:25:44 INFO handler.ContextHandler: stopped o.e.j.s.ServletContextHandler{/jobs,null}
+15/10/17 18:25:44 WARN util.Utils: Service 'SparkUI' could not bind on port 4043. Attempting port 4044.
+15/10/17 18:25:44 INFO server.Server: jetty-8.y.z-SNAPSHOT
+15/10/17 18:25:44 WARN component.AbstractLifeCycle: FAILED SelectChannelConnector@0.0.0.0:4044: java.net.BindException: Address already in use
+java.net.BindException: Address already in use
+        at sun.nio.ch.Net.bind0(Native Method)
+        at sun.nio.ch.Net.bind(Net.java:444)
+        at sun.nio.ch.Net.bind(Net.java:436)
+        at sun.nio.ch.ServerSocketChannelImpl.bind(ServerSocketChannelImpl.java:214)
+        at sun.nio.ch.ServerSocketAdaptor.bind(ServerSocketAdaptor.java:74)
+        at org.eclipse.jetty.server.nio.SelectChannelConnector.open(SelectChannelConnector.java:187)
+        at org.eclipse.jetty.server.AbstractConnector.doStart(AbstractConnector.java:316)
+        at org.eclipse.jetty.server.nio.SelectChannelConnector.doStart(SelectChannelConnector.java:265)
+        at org.eclipse.jetty.util.component.AbstractLifeCycle.start(AbstractLifeCycle.java:64)
+        at org.eclipse.jetty.server.Server.doStart(Server.java:293)
+        at org.eclipse.jetty.util.component.AbstractLifeCycle.start(AbstractLifeCycle.java:64)
+        at org.apache.spark.ui.JettyUtils$.org$apache$spark$ui$JettyUtils$$connect$1(JettyUtils.scala:194)
+        at org.apache.spark.ui.JettyUtils$$anonfun$2.apply(JettyUtils.scala:204)
+        at org.apache.spark.ui.JettyUtils$$anonfun$2.apply(JettyUtils.scala:204)
+        at org.apache.spark.util.Utils$$anonfun$startServiceOnPort$1.apply$mcVI$sp(Utils.scala:1676)
+        at scala.collection.immutable.Range.foreach$mVc$sp(Range.scala:141)
+        at org.apache.spark.util.Utils$.startServiceOnPort(Utils.scala:1667)
+        at org.apache.spark.ui.JettyUtils$.startJettyServer(JettyUtils.scala:204)
+        at org.apache.spark.ui.WebUI.bind(WebUI.scala:102)
+        at org.apache.spark.SparkContext$$anonfun$10.apply(SparkContext.scala:269)
+        at org.apache.spark.SparkContext$$anonfun$10.apply(SparkContext.scala:269)
+        at scala.Option.foreach(Option.scala:236)
+        at org.apache.spark.SparkContext.<init>(SparkContext.scala:269)
+        at org.apache.spark.repl.SparkILoop.createSparkContext(SparkILoop.scala:986)
+        at $line3.$read$$iwC$$iwC.<init>(<console>:9)
+        at $line3.$read$$iwC.<init>(<console>:18)
+        at $line3.$read.<init>(<console>:20)
+        at $line3.$read$.<init>(<console>:24)
+        at $line3.$read$.<clinit>(<console>)
+        at $line3.$eval$.<init>(<console>:7)
+        at $line3.$eval$.<clinit>(<console>)
+        at $line3.$eval.$print(<console>)
+        at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+        at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:57)
+        at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+        at java.lang.reflect.Method.invoke(Method.java:606)
+        at org.apache.spark.repl.SparkIMain$ReadEvalPrint.call(SparkIMain.scala:852)
+        at org.apache.spark.repl.SparkIMain$Request.loadAndRun(SparkIMain.scala:1125)
+        at org.apache.spark.repl.SparkIMain.loadAndRunReq$1(SparkIMain.scala:674)
+        at org.apache.spark.repl.SparkIMain.interpret(SparkIMain.scala:705)
+        at org.apache.spark.repl.SparkIMain.interpret(SparkIMain.scala:669)
+        at org.apache.spark.repl.SparkILoop.reallyInterpret$1(SparkILoop.scala:828)
+        at org.apache.spark.repl.SparkILoop.interpretStartingWith(SparkILoop.scala:873)
+        at org.apache.spark.repl.SparkILoop.command(SparkILoop.scala:785)
+        at org.apache.spark.repl.SparkILoopInit$$anonfun$initializeSpark$1.apply(SparkILoopInit.scala:123)
+        at org.apache.spark.repl.SparkILoopInit$$anonfun$initializeSpark$1.apply(SparkILoopInit.scala:122)
+        at org.apache.spark.repl.SparkIMain.beQuietDuring(SparkIMain.scala:270)
+        at org.apache.spark.repl.SparkILoopInit$class.initializeSpark(SparkILoopInit.scala:122)
+        at org.apache.spark.repl.SparkILoop.initializeSpark(SparkILoop.scala:60)
+        at org.apache.spark.repl.SparkILoop$$anonfun$process$1$$anonfun$apply$mcZ$sp$5.apply$mcV$sp(SparkILoop.scala:945)
+        at org.apache.spark.repl.SparkILoopInit$class.runThunks(SparkILoopInit.scala:147)
+        at org.apache.spark.repl.SparkILoop.runThunks(SparkILoop.scala:60)
+        at org.apache.spark.repl.SparkILoopInit$class.postInitialization(SparkILoopInit.scala:106)
+        at org.apache.spark.repl.SparkILoop.postInitialization(SparkILoop.scala:60)
+        at org.apache.spark.repl.SparkILoop$$anonfun$process$1.apply$mcZ$sp(SparkILoop.scala:962)
+        at org.apache.spark.repl.SparkILoop$$anonfun$process$1.apply(SparkILoop.scala:916)
+        at org.apache.spark.repl.SparkILoop$$anonfun$process$1.apply(SparkILoop.scala:916)
+        at scala.tools.nsc.util.ScalaClassLoader$.savingContextLoader(ScalaClassLoader.scala:135)
+        at org.apache.spark.repl.SparkILoop.process(SparkILoop.scala:916)
+        at org.apache.spark.repl.SparkILoop.process(SparkILoop.scala:1011)
+        at org.apache.spark.repl.Main$.main(Main.scala:31)
+        at org.apache.spark.repl.Main.main(Main.scala)
+        at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+        at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:57)
+        at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+        at java.lang.reflect.Method.invoke(Method.java:606)
+        at org.apache.spark.deploy.SparkSubmit$.launch(SparkSubmit.scala:358)
+        at org.apache.spark.deploy.SparkSubmit$.main(SparkSubmit.scala:75)
+        at org.apache.spark.deploy.SparkSubmit.main(SparkSubmit.scala)
+15/10/17 18:25:44 WARN component.AbstractLifeCycle: FAILED org.eclipse.jetty.server.Server@16cb876f: java.net.BindException: Address already in use
+java.net.BindException: Address already in use
+        at sun.nio.ch.Net.bind0(Native Method)
+        at sun.nio.ch.Net.bind(Net.java:444)
+        at sun.nio.ch.Net.bind(Net.java:436)
+        at sun.nio.ch.ServerSocketChannelImpl.bind(ServerSocketChannelImpl.java:214)
+        at sun.nio.ch.ServerSocketAdaptor.bind(ServerSocketAdaptor.java:74)
+        at org.eclipse.jetty.server.nio.SelectChannelConnector.open(SelectChannelConnector.java:187)
+        at org.eclipse.jetty.server.AbstractConnector.doStart(AbstractConnector.java:316)
+        at org.eclipse.jetty.server.nio.SelectChannelConnector.doStart(SelectChannelConnector.java:265)
+        at org.eclipse.jetty.util.component.AbstractLifeCycle.start(AbstractLifeCycle.java:64)
+        at org.eclipse.jetty.server.Server.doStart(Server.java:293)
+        at org.eclipse.jetty.util.component.AbstractLifeCycle.start(AbstractLifeCycle.java:64)
+        at org.apache.spark.ui.JettyUtils$.org$apache$spark$ui$JettyUtils$$connect$1(JettyUtils.scala:194)
+        at org.apache.spark.ui.JettyUtils$$anonfun$2.apply(JettyUtils.scala:204)
+        at org.apache.spark.ui.JettyUtils$$anonfun$2.apply(JettyUtils.scala:204)
+        at org.apache.spark.util.Utils$$anonfun$startServiceOnPort$1.apply$mcVI$sp(Utils.scala:1676)
+        at scala.collection.immutable.Range.foreach$mVc$sp(Range.scala:141)
+        at org.apache.spark.util.Utils$.startServiceOnPort(Utils.scala:1667)
+        at org.apache.spark.ui.JettyUtils$.startJettyServer(JettyUtils.scala:204)
+        at org.apache.spark.ui.WebUI.bind(WebUI.scala:102)
+        at org.apache.spark.SparkContext$$anonfun$10.apply(SparkContext.scala:269)
+        at org.apache.spark.SparkContext$$anonfun$10.apply(SparkContext.scala:269)
+        at scala.Option.foreach(Option.scala:236)
+        at org.apache.spark.SparkContext.<init>(SparkContext.scala:269)
+        at org.apache.spark.repl.SparkILoop.createSparkContext(SparkILoop.scala:986)
+        at $line3.$read$$iwC$$iwC.<init>(<console>:9)
+        at $line3.$read$$iwC.<init>(<console>:18)
+        at $line3.$read.<init>(<console>:20)
+        at $line3.$read$.<init>(<console>:24)
+        at $line3.$read$.<clinit>(<console>)
+        at $line3.$eval$.<init>(<console>:7)
+        at $line3.$eval$.<clinit>(<console>)
+        at $line3.$eval.$print(<console>)
+        at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+        at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:57)
+        at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+        at java.lang.reflect.Method.invoke(Method.java:606)
+        at org.apache.spark.repl.SparkIMain$ReadEvalPrint.call(SparkIMain.scala:852)
+        at org.apache.spark.repl.SparkIMain$Request.loadAndRun(SparkIMain.scala:1125)
+        at org.apache.spark.repl.SparkIMain.loadAndRunReq$1(SparkIMain.scala:674)
+        at org.apache.spark.repl.SparkIMain.interpret(SparkIMain.scala:705)
+        at org.apache.spark.repl.SparkIMain.interpret(SparkIMain.scala:669)
+        at org.apache.spark.repl.SparkILoop.reallyInterpret$1(SparkILoop.scala:828)
+        at org.apache.spark.repl.SparkILoop.interpretStartingWith(SparkILoop.scala:873)
+        at org.apache.spark.repl.SparkILoop.command(SparkILoop.scala:785)
+        at org.apache.spark.repl.SparkILoopInit$$anonfun$initializeSpark$1.apply(SparkILoopInit.scala:123)
+        at org.apache.spark.repl.SparkILoopInit$$anonfun$initializeSpark$1.apply(SparkILoopInit.scala:122)
+        at org.apache.spark.repl.SparkIMain.beQuietDuring(SparkIMain.scala:270)
+        at org.apache.spark.repl.SparkILoopInit$class.initializeSpark(SparkILoopInit.scala:122)
+        at org.apache.spark.repl.SparkILoop.initializeSpark(SparkILoop.scala:60)
+        at org.apache.spark.repl.SparkILoop$$anonfun$process$1$$anonfun$apply$mcZ$sp$5.apply$mcV$sp(SparkILoop.scala:945)
+        at org.apache.spark.repl.SparkILoopInit$class.runThunks(SparkILoopInit.scala:147)
+        at org.apache.spark.repl.SparkILoop.runThunks(SparkILoop.scala:60)
+        at org.apache.spark.repl.SparkILoopInit$class.postInitialization(SparkILoopInit.scala:106)
+        at org.apache.spark.repl.SparkILoop.postInitialization(SparkILoop.scala:60)
+        at org.apache.spark.repl.SparkILoop$$anonfun$process$1.apply$mcZ$sp(SparkILoop.scala:962)
+        at org.apache.spark.repl.SparkILoop$$anonfun$process$1.apply(SparkILoop.scala:916)
+        at org.apache.spark.repl.SparkILoop$$anonfun$process$1.apply(SparkILoop.scala:916)
+        at scala.tools.nsc.util.ScalaClassLoader$.savingContextLoader(ScalaClassLoader.scala:135)
+        at org.apache.spark.repl.SparkILoop.process(SparkILoop.scala:916)
+        at org.apache.spark.repl.SparkILoop.process(SparkILoop.scala:1011)
+        at org.apache.spark.repl.Main$.main(Main.scala:31)
+        at org.apache.spark.repl.Main.main(Main.scala)
+        at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+        at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:57)
+        at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+        at java.lang.reflect.Method.invoke(Method.java:606)
+        at org.apache.spark.deploy.SparkSubmit$.launch(SparkSubmit.scala:358)
+        at org.apache.spark.deploy.SparkSubmit$.main(SparkSubmit.scala:75)
+        at org.apache.spark.deploy.SparkSubmit.main(SparkSubmit.scala)
+15/10/17 18:25:44 INFO handler.ContextHandler: stopped o.e.j.s.ServletContextHandler{/stages/stage/kill,null}
+15/10/17 18:25:44 INFO handler.ContextHandler: stopped o.e.j.s.ServletContextHandler{/,null}
+15/10/17 18:25:44 INFO handler.ContextHandler: stopped o.e.j.s.ServletContextHandler{/static,null}
+15/10/17 18:25:44 INFO handler.ContextHandler: stopped o.e.j.s.ServletContextHandler{/executors/threadDump/json,null}
+15/10/17 18:25:44 INFO handler.ContextHandler: stopped o.e.j.s.ServletContextHandler{/executors/threadDump,null}
+15/10/17 18:25:44 INFO handler.ContextHandler: stopped o.e.j.s.ServletContextHandler{/executors/json,null}
+15/10/17 18:25:44 INFO handler.ContextHandler: stopped o.e.j.s.ServletContextHandler{/executors,null}
+15/10/17 18:25:44 INFO handler.ContextHandler: stopped o.e.j.s.ServletContextHandler{/environment/json,null}
+15/10/17 18:25:44 INFO handler.ContextHandler: stopped o.e.j.s.ServletContextHandler{/environment,null}
+15/10/17 18:25:44 INFO handler.ContextHandler: stopped o.e.j.s.ServletContextHandler{/storage/rdd/json,null}
+15/10/17 18:25:44 INFO handler.ContextHandler: stopped o.e.j.s.ServletContextHandler{/storage/rdd,null}
+15/10/17 18:25:44 INFO handler.ContextHandler: stopped o.e.j.s.ServletContextHandler{/storage/json,null}
+15/10/17 18:25:44 INFO handler.ContextHandler: stopped o.e.j.s.ServletContextHandler{/storage,null}
+15/10/17 18:25:44 INFO handler.ContextHandler: stopped o.e.j.s.ServletContextHandler{/stages/pool/json,null}
+15/10/17 18:25:44 INFO handler.ContextHandler: stopped o.e.j.s.ServletContextHandler{/stages/pool,null}
+15/10/17 18:25:44 INFO handler.ContextHandler: stopped o.e.j.s.ServletContextHandler{/stages/stage/json,null}
+15/10/17 18:25:44 INFO handler.ContextHandler: stopped o.e.j.s.ServletContextHandler{/stages/stage,null}
+15/10/17 18:25:44 INFO handler.ContextHandler: stopped o.e.j.s.ServletContextHandler{/stages/json,null}
+15/10/17 18:25:44 INFO handler.ContextHandler: stopped o.e.j.s.ServletContextHandler{/stages,null}
+15/10/17 18:25:44 INFO handler.ContextHandler: stopped o.e.j.s.ServletContextHandler{/jobs/job/json,null}
+15/10/17 18:25:44 INFO handler.ContextHandler: stopped o.e.j.s.ServletContextHandler{/jobs/job,null}
+15/10/17 18:25:44 INFO handler.ContextHandler: stopped o.e.j.s.ServletContextHandler{/jobs/json,null}
+15/10/17 18:25:44 INFO handler.ContextHandler: stopped o.e.j.s.ServletContextHandler{/jobs,null}
+15/10/17 18:25:44 WARN util.Utils: Service 'SparkUI' could not bind on port 4044. Attempting port 4045.
+15/10/17 18:25:44 INFO server.Server: jetty-8.y.z-SNAPSHOT
+15/10/17 18:25:44 WARN component.AbstractLifeCycle: FAILED SelectChannelConnector@0.0.0.0:4045: java.net.BindException: Address already in use
+java.net.BindException: Address already in use
+        at sun.nio.ch.Net.bind0(Native Method)
+        at sun.nio.ch.Net.bind(Net.java:444)
+        at sun.nio.ch.Net.bind(Net.java:436)
+        at sun.nio.ch.ServerSocketChannelImpl.bind(ServerSocketChannelImpl.java:214)
+        at sun.nio.ch.ServerSocketAdaptor.bind(ServerSocketAdaptor.java:74)
+        at org.eclipse.jetty.server.nio.SelectChannelConnector.open(SelectChannelConnector.java:187)
+        at org.eclipse.jetty.server.AbstractConnector.doStart(AbstractConnector.java:316)
+        at org.eclipse.jetty.server.nio.SelectChannelConnector.doStart(SelectChannelConnector.java:265)
+        at org.eclipse.jetty.util.component.AbstractLifeCycle.start(AbstractLifeCycle.java:64)
+        at org.eclipse.jetty.server.Server.doStart(Server.java:293)
+        at org.eclipse.jetty.util.component.AbstractLifeCycle.start(AbstractLifeCycle.java:64)
+        at org.apache.spark.ui.JettyUtils$.org$apache$spark$ui$JettyUtils$$connect$1(JettyUtils.scala:194)
+        at org.apache.spark.ui.JettyUtils$$anonfun$2.apply(JettyUtils.scala:204)
+        at org.apache.spark.ui.JettyUtils$$anonfun$2.apply(JettyUtils.scala:204)
+        at org.apache.spark.util.Utils$$anonfun$startServiceOnPort$1.apply$mcVI$sp(Utils.scala:1676)
+        at scala.collection.immutable.Range.foreach$mVc$sp(Range.scala:141)
+        at org.apache.spark.util.Utils$.startServiceOnPort(Utils.scala:1667)
+        at org.apache.spark.ui.JettyUtils$.startJettyServer(JettyUtils.scala:204)
+        at org.apache.spark.ui.WebUI.bind(WebUI.scala:102)
+        at org.apache.spark.SparkContext$$anonfun$10.apply(SparkContext.scala:269)
+        at org.apache.spark.SparkContext$$anonfun$10.apply(SparkContext.scala:269)
+        at scala.Option.foreach(Option.scala:236)
+        at org.apache.spark.SparkContext.<init>(SparkContext.scala:269)
+        at org.apache.spark.repl.SparkILoop.createSparkContext(SparkILoop.scala:986)
+        at $line3.$read$$iwC$$iwC.<init>(<console>:9)
+        at $line3.$read$$iwC.<init>(<console>:18)
+        at $line3.$read.<init>(<console>:20)
+        at $line3.$read$.<init>(<console>:24)
+        at $line3.$read$.<clinit>(<console>)
+        at $line3.$eval$.<init>(<console>:7)
+        at $line3.$eval$.<clinit>(<console>)
+        at $line3.$eval.$print(<console>)
+        at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+        at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:57)
+        at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+        at java.lang.reflect.Method.invoke(Method.java:606)
+        at org.apache.spark.repl.SparkIMain$ReadEvalPrint.call(SparkIMain.scala:852)
+        at org.apache.spark.repl.SparkIMain$Request.loadAndRun(SparkIMain.scala:1125)
+        at org.apache.spark.repl.SparkIMain.loadAndRunReq$1(SparkIMain.scala:674)
+        at org.apache.spark.repl.SparkIMain.interpret(SparkIMain.scala:705)
+        at org.apache.spark.repl.SparkIMain.interpret(SparkIMain.scala:669)
+        at org.apache.spark.repl.SparkILoop.reallyInterpret$1(SparkILoop.scala:828)
+        at org.apache.spark.repl.SparkILoop.interpretStartingWith(SparkILoop.scala:873)
+        at org.apache.spark.repl.SparkILoop.command(SparkILoop.scala:785)
+        at org.apache.spark.repl.SparkILoopInit$$anonfun$initializeSpark$1.apply(SparkILoopInit.scala:123)
+        at org.apache.spark.repl.SparkILoopInit$$anonfun$initializeSpark$1.apply(SparkILoopInit.scala:122)
+        at org.apache.spark.repl.SparkIMain.beQuietDuring(SparkIMain.scala:270)
+        at org.apache.spark.repl.SparkILoopInit$class.initializeSpark(SparkILoopInit.scala:122)
+        at org.apache.spark.repl.SparkILoop.initializeSpark(SparkILoop.scala:60)
+        at org.apache.spark.repl.SparkILoop$$anonfun$process$1$$anonfun$apply$mcZ$sp$5.apply$mcV$sp(SparkILoop.scala:945)
+        at org.apache.spark.repl.SparkILoopInit$class.runThunks(SparkILoopInit.scala:147)
+        at org.apache.spark.repl.SparkILoop.runThunks(SparkILoop.scala:60)
+        at org.apache.spark.repl.SparkILoopInit$class.postInitialization(SparkILoopInit.scala:106)
+        at org.apache.spark.repl.SparkILoop.postInitialization(SparkILoop.scala:60)
+        at org.apache.spark.repl.SparkILoop$$anonfun$process$1.apply$mcZ$sp(SparkILoop.scala:962)
+        at org.apache.spark.repl.SparkILoop$$anonfun$process$1.apply(SparkILoop.scala:916)
+        at org.apache.spark.repl.SparkILoop$$anonfun$process$1.apply(SparkILoop.scala:916)
+        at scala.tools.nsc.util.ScalaClassLoader$.savingContextLoader(ScalaClassLoader.scala:135)
+        at org.apache.spark.repl.SparkILoop.process(SparkILoop.scala:916)
+        at org.apache.spark.repl.SparkILoop.process(SparkILoop.scala:1011)
+        at org.apache.spark.repl.Main$.main(Main.scala:31)
+        at org.apache.spark.repl.Main.main(Main.scala)
+        at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+        at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:57)
+        at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+        at java.lang.reflect.Method.invoke(Method.java:606)
+        at org.apache.spark.deploy.SparkSubmit$.launch(SparkSubmit.scala:358)
+        at org.apache.spark.deploy.SparkSubmit$.main(SparkSubmit.scala:75)
+        at org.apache.spark.deploy.SparkSubmit.main(SparkSubmit.scala)
+15/10/17 18:25:44 WARN component.AbstractLifeCycle: FAILED org.eclipse.jetty.server.Server@31369e61: java.net.BindException: Address already in use
+java.net.BindException: Address already in use
+        at sun.nio.ch.Net.bind0(Native Method)
+        at sun.nio.ch.Net.bind(Net.java:444)
+        at sun.nio.ch.Net.bind(Net.java:436)
+        at sun.nio.ch.ServerSocketChannelImpl.bind(ServerSocketChannelImpl.java:214)
+        at sun.nio.ch.ServerSocketAdaptor.bind(ServerSocketAdaptor.java:74)
+        at org.eclipse.jetty.server.nio.SelectChannelConnector.open(SelectChannelConnector.java:187)
+        at org.eclipse.jetty.server.AbstractConnector.doStart(AbstractConnector.java:316)
+        at org.eclipse.jetty.server.nio.SelectChannelConnector.doStart(SelectChannelConnector.java:265)
+        at org.eclipse.jetty.util.component.AbstractLifeCycle.start(AbstractLifeCycle.java:64)
+        at org.eclipse.jetty.server.Server.doStart(Server.java:293)
+        at org.eclipse.jetty.util.component.AbstractLifeCycle.start(AbstractLifeCycle.java:64)
+        at org.apache.spark.ui.JettyUtils$.org$apache$spark$ui$JettyUtils$$connect$1(JettyUtils.scala:194)
+        at org.apache.spark.ui.JettyUtils$$anonfun$2.apply(JettyUtils.scala:204)
+        at org.apache.spark.ui.JettyUtils$$anonfun$2.apply(JettyUtils.scala:204)
+        at org.apache.spark.util.Utils$$anonfun$startServiceOnPort$1.apply$mcVI$sp(Utils.scala:1676)
+        at scala.collection.immutable.Range.foreach$mVc$sp(Range.scala:141)
+        at org.apache.spark.util.Utils$.startServiceOnPort(Utils.scala:1667)
+        at org.apache.spark.ui.JettyUtils$.startJettyServer(JettyUtils.scala:204)
+        at org.apache.spark.ui.WebUI.bind(WebUI.scala:102)
+        at org.apache.spark.SparkContext$$anonfun$10.apply(SparkContext.scala:269)
+        at org.apache.spark.SparkContext$$anonfun$10.apply(SparkContext.scala:269)
+        at scala.Option.foreach(Option.scala:236)
+        at org.apache.spark.SparkContext.<init>(SparkContext.scala:269)
+        at org.apache.spark.repl.SparkILoop.createSparkContext(SparkILoop.scala:986)
+        at $line3.$read$$iwC$$iwC.<init>(<console>:9)
+        at $line3.$read$$iwC.<init>(<console>:18)
+        at $line3.$read.<init>(<console>:20)
+        at $line3.$read$.<init>(<console>:24)
+        at $line3.$read$.<clinit>(<console>)
+        at $line3.$eval$.<init>(<console>:7)
+        at $line3.$eval$.<clinit>(<console>)
+        at $line3.$eval.$print(<console>)
+        at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+        at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:57)
+        at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+        at java.lang.reflect.Method.invoke(Method.java:606)
+        at org.apache.spark.repl.SparkIMain$ReadEvalPrint.call(SparkIMain.scala:852)
+        at org.apache.spark.repl.SparkIMain$Request.loadAndRun(SparkIMain.scala:1125)
+        at org.apache.spark.repl.SparkIMain.loadAndRunReq$1(SparkIMain.scala:674)
+        at org.apache.spark.repl.SparkIMain.interpret(SparkIMain.scala:705)
+        at org.apache.spark.repl.SparkIMain.interpret(SparkIMain.scala:669)
+        at org.apache.spark.repl.SparkILoop.reallyInterpret$1(SparkILoop.scala:828)
+        at org.apache.spark.repl.SparkILoop.interpretStartingWith(SparkILoop.scala:873)
+        at org.apache.spark.repl.SparkILoop.command(SparkILoop.scala:785)
+        at org.apache.spark.repl.SparkILoopInit$$anonfun$initializeSpark$1.apply(SparkILoopInit.scala:123)
+        at org.apache.spark.repl.SparkILoopInit$$anonfun$initializeSpark$1.apply(SparkILoopInit.scala:122)
+        at org.apache.spark.repl.SparkIMain.beQuietDuring(SparkIMain.scala:270)
+        at org.apache.spark.repl.SparkILoopInit$class.initializeSpark(SparkILoopInit.scala:122)
+        at org.apache.spark.repl.SparkILoop.initializeSpark(SparkILoop.scala:60)
+        at org.apache.spark.repl.SparkILoop$$anonfun$process$1$$anonfun$apply$mcZ$sp$5.apply$mcV$sp(SparkILoop.scala:945)
+        at org.apache.spark.repl.SparkILoopInit$class.runThunks(SparkILoopInit.scala:147)
+        at org.apache.spark.repl.SparkILoop.runThunks(SparkILoop.scala:60)
+        at org.apache.spark.repl.SparkILoopInit$class.postInitialization(SparkILoopInit.scala:106)
+        at org.apache.spark.repl.SparkILoop.postInitialization(SparkILoop.scala:60)
+        at org.apache.spark.repl.SparkILoop$$anonfun$process$1.apply$mcZ$sp(SparkILoop.scala:962)
+        at org.apache.spark.repl.SparkILoop$$anonfun$process$1.apply(SparkILoop.scala:916)
+        at org.apache.spark.repl.SparkILoop$$anonfun$process$1.apply(SparkILoop.scala:916)
+        at scala.tools.nsc.util.ScalaClassLoader$.savingContextLoader(ScalaClassLoader.scala:135)
+        at org.apache.spark.repl.SparkILoop.process(SparkILoop.scala:916)
+        at org.apache.spark.repl.SparkILoop.process(SparkILoop.scala:1011)
+        at org.apache.spark.repl.Main$.main(Main.scala:31)
+        at org.apache.spark.repl.Main.main(Main.scala)
+        at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+        at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:57)
+        at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+        at java.lang.reflect.Method.invoke(Method.java:606)
+        at org.apache.spark.deploy.SparkSubmit$.launch(SparkSubmit.scala:358)
+        at org.apache.spark.deploy.SparkSubmit$.main(SparkSubmit.scala:75)
+        at org.apache.spark.deploy.SparkSubmit.main(SparkSubmit.scala)
+15/10/17 18:25:44 INFO handler.ContextHandler: stopped o.e.j.s.ServletContextHandler{/stages/stage/kill,null}
+15/10/17 18:25:44 INFO handler.ContextHandler: stopped o.e.j.s.ServletContextHandler{/,null}
+15/10/17 18:25:44 INFO handler.ContextHandler: stopped o.e.j.s.ServletContextHandler{/static,null}
+15/10/17 18:25:44 INFO handler.ContextHandler: stopped o.e.j.s.ServletContextHandler{/executors/threadDump/json,null}
+15/10/17 18:25:44 INFO handler.ContextHandler: stopped o.e.j.s.ServletContextHandler{/executors/threadDump,null}
+15/10/17 18:25:44 INFO handler.ContextHandler: stopped o.e.j.s.ServletContextHandler{/executors/json,null}
+15/10/17 18:25:44 INFO handler.ContextHandler: stopped o.e.j.s.ServletContextHandler{/executors,null}
+15/10/17 18:25:44 INFO handler.ContextHandler: stopped o.e.j.s.ServletContextHandler{/environment/json,null}
+15/10/17 18:25:44 INFO handler.ContextHandler: stopped o.e.j.s.ServletContextHandler{/environment,null}
+15/10/17 18:25:44 INFO handler.ContextHandler: stopped o.e.j.s.ServletContextHandler{/storage/rdd/json,null}
+15/10/17 18:25:44 INFO handler.ContextHandler: stopped o.e.j.s.ServletContextHandler{/storage/rdd,null}
+15/10/17 18:25:44 INFO handler.ContextHandler: stopped o.e.j.s.ServletContextHandler{/storage/json,null}
+15/10/17 18:25:44 INFO handler.ContextHandler: stopped o.e.j.s.ServletContextHandler{/storage,null}
+15/10/17 18:25:44 INFO handler.ContextHandler: stopped o.e.j.s.ServletContextHandler{/stages/pool/json,null}
+15/10/17 18:25:44 INFO handler.ContextHandler: stopped o.e.j.s.ServletContextHandler{/stages/pool,null}
+15/10/17 18:25:44 INFO handler.ContextHandler: stopped o.e.j.s.ServletContextHandler{/stages/stage/json,null}
+15/10/17 18:25:44 INFO handler.ContextHandler: stopped o.e.j.s.ServletContextHandler{/stages/stage,null}
+15/10/17 18:25:44 INFO handler.ContextHandler: stopped o.e.j.s.ServletContextHandler{/stages/json,null}
+15/10/17 18:25:44 INFO handler.ContextHandler: stopped o.e.j.s.ServletContextHandler{/stages,null}
+15/10/17 18:25:44 INFO handler.ContextHandler: stopped o.e.j.s.ServletContextHandler{/jobs/job/json,null}
+15/10/17 18:25:44 INFO handler.ContextHandler: stopped o.e.j.s.ServletContextHandler{/jobs/job,null}
+15/10/17 18:25:44 INFO handler.ContextHandler: stopped o.e.j.s.ServletContextHandler{/jobs/json,null}
+15/10/17 18:25:44 INFO handler.ContextHandler: stopped o.e.j.s.ServletContextHandler{/jobs,null}
+15/10/17 18:25:44 WARN util.Utils: Service 'SparkUI' could not bind on port 4045. Attempting port 4046.
+15/10/17 18:25:44 INFO server.Server: jetty-8.y.z-SNAPSHOT
+15/10/17 18:25:44 WARN component.AbstractLifeCycle: FAILED SelectChannelConnector@0.0.0.0:4046: java.net.BindException: Address already in use
+java.net.BindException: Address already in use
+        at sun.nio.ch.Net.bind0(Native Method)
+        at sun.nio.ch.Net.bind(Net.java:444)
+        at sun.nio.ch.Net.bind(Net.java:436)
+        at sun.nio.ch.ServerSocketChannelImpl.bind(ServerSocketChannelImpl.java:214)
+        at sun.nio.ch.ServerSocketAdaptor.bind(ServerSocketAdaptor.java:74)
+        at org.eclipse.jetty.server.nio.SelectChannelConnector.open(SelectChannelConnector.java:187)
+        at org.eclipse.jetty.server.AbstractConnector.doStart(AbstractConnector.java:316)
+        at org.eclipse.jetty.server.nio.SelectChannelConnector.doStart(SelectChannelConnector.java:265)
+        at org.eclipse.jetty.util.component.AbstractLifeCycle.start(AbstractLifeCycle.java:64)
+        at org.eclipse.jetty.server.Server.doStart(Server.java:293)
+        at org.eclipse.jetty.util.component.AbstractLifeCycle.start(AbstractLifeCycle.java:64)
+        at org.apache.spark.ui.JettyUtils$.org$apache$spark$ui$JettyUtils$$connect$1(JettyUtils.scala:194)
+        at org.apache.spark.ui.JettyUtils$$anonfun$2.apply(JettyUtils.scala:204)
+        at org.apache.spark.ui.JettyUtils$$anonfun$2.apply(JettyUtils.scala:204)
+        at org.apache.spark.util.Utils$$anonfun$startServiceOnPort$1.apply$mcVI$sp(Utils.scala:1676)
+        at scala.collection.immutable.Range.foreach$mVc$sp(Range.scala:141)
+        at org.apache.spark.util.Utils$.startServiceOnPort(Utils.scala:1667)
+        at org.apache.spark.ui.JettyUtils$.startJettyServer(JettyUtils.scala:204)
+        at org.apache.spark.ui.WebUI.bind(WebUI.scala:102)
+        at org.apache.spark.SparkContext$$anonfun$10.apply(SparkContext.scala:269)
+        at org.apache.spark.SparkContext$$anonfun$10.apply(SparkContext.scala:269)
+        at scala.Option.foreach(Option.scala:236)
+        at org.apache.spark.SparkContext.<init>(SparkContext.scala:269)
+        at org.apache.spark.repl.SparkILoop.createSparkContext(SparkILoop.scala:986)
+        at $line3.$read$$iwC$$iwC.<init>(<console>:9)
+        at $line3.$read$$iwC.<init>(<console>:18)
+        at $line3.$read.<init>(<console>:20)
+        at $line3.$read$.<init>(<console>:24)
+        at $line3.$read$.<clinit>(<console>)
+        at $line3.$eval$.<init>(<console>:7)
+        at $line3.$eval$.<clinit>(<console>)
+        at $line3.$eval.$print(<console>)
+        at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+        at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:57)
+        at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+        at java.lang.reflect.Method.invoke(Method.java:606)
+        at org.apache.spark.repl.SparkIMain$ReadEvalPrint.call(SparkIMain.scala:852)
+        at org.apache.spark.repl.SparkIMain$Request.loadAndRun(SparkIMain.scala:1125)
+        at org.apache.spark.repl.SparkIMain.loadAndRunReq$1(SparkIMain.scala:674)
+        at org.apache.spark.repl.SparkIMain.interpret(SparkIMain.scala:705)
+        at org.apache.spark.repl.SparkIMain.interpret(SparkIMain.scala:669)
+        at org.apache.spark.repl.SparkILoop.reallyInterpret$1(SparkILoop.scala:828)
+        at org.apache.spark.repl.SparkILoop.interpretStartingWith(SparkILoop.scala:873)
+        at org.apache.spark.repl.SparkILoop.command(SparkILoop.scala:785)
+        at org.apache.spark.repl.SparkILoopInit$$anonfun$initializeSpark$1.apply(SparkILoopInit.scala:123)
+        at org.apache.spark.repl.SparkILoopInit$$anonfun$initializeSpark$1.apply(SparkILoopInit.scala:122)
+        at org.apache.spark.repl.SparkIMain.beQuietDuring(SparkIMain.scala:270)
+        at org.apache.spark.repl.SparkILoopInit$class.initializeSpark(SparkILoopInit.scala:122)
+        at org.apache.spark.repl.SparkILoop.initializeSpark(SparkILoop.scala:60)
+        at org.apache.spark.repl.SparkILoop$$anonfun$process$1$$anonfun$apply$mcZ$sp$5.apply$mcV$sp(SparkILoop.scala:945)
+        at org.apache.spark.repl.SparkILoopInit$class.runThunks(SparkILoopInit.scala:147)
+        at org.apache.spark.repl.SparkILoop.runThunks(SparkILoop.scala:60)
+        at org.apache.spark.repl.SparkILoopInit$class.postInitialization(SparkILoopInit.scala:106)
+        at org.apache.spark.repl.SparkILoop.postInitialization(SparkILoop.scala:60)
+        at org.apache.spark.repl.SparkILoop$$anonfun$process$1.apply$mcZ$sp(SparkILoop.scala:962)
+        at org.apache.spark.repl.SparkILoop$$anonfun$process$1.apply(SparkILoop.scala:916)
+        at org.apache.spark.repl.SparkILoop$$anonfun$process$1.apply(SparkILoop.scala:916)
+        at scala.tools.nsc.util.ScalaClassLoader$.savingContextLoader(ScalaClassLoader.scala:135)
+        at org.apache.spark.repl.SparkILoop.process(SparkILoop.scala:916)
+        at org.apache.spark.repl.SparkILoop.process(SparkILoop.scala:1011)
+        at org.apache.spark.repl.Main$.main(Main.scala:31)
+        at org.apache.spark.repl.Main.main(Main.scala)
+        at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+        at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:57)
+        at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+        at java.lang.reflect.Method.invoke(Method.java:606)
+        at org.apache.spark.deploy.SparkSubmit$.launch(SparkSubmit.scala:358)
+        at org.apache.spark.deploy.SparkSubmit$.main(SparkSubmit.scala:75)
+        at org.apache.spark.deploy.SparkSubmit.main(SparkSubmit.scala)
+15/10/17 18:25:44 WARN component.AbstractLifeCycle: FAILED org.eclipse.jetty.server.Server@3154768d: java.net.BindException: Address already in use
+java.net.BindException: Address already in use
+        at sun.nio.ch.Net.bind0(Native Method)
+        at sun.nio.ch.Net.bind(Net.java:444)
+        at sun.nio.ch.Net.bind(Net.java:436)
+        at sun.nio.ch.ServerSocketChannelImpl.bind(ServerSocketChannelImpl.java:214)
+        at sun.nio.ch.ServerSocketAdaptor.bind(ServerSocketAdaptor.java:74)
+        at org.eclipse.jetty.server.nio.SelectChannelConnector.open(SelectChannelConnector.java:187)
+        at org.eclipse.jetty.server.AbstractConnector.doStart(AbstractConnector.java:316)
+        at org.eclipse.jetty.server.nio.SelectChannelConnector.doStart(SelectChannelConnector.java:265)
+        at org.eclipse.jetty.util.component.AbstractLifeCycle.start(AbstractLifeCycle.java:64)
+        at org.eclipse.jetty.server.Server.doStart(Server.java:293)
+        at org.eclipse.jetty.util.component.AbstractLifeCycle.start(AbstractLifeCycle.java:64)
+        at org.apache.spark.ui.JettyUtils$.org$apache$spark$ui$JettyUtils$$connect$1(JettyUtils.scala:194)
+        at org.apache.spark.ui.JettyUtils$$anonfun$2.apply(JettyUtils.scala:204)
+        at org.apache.spark.ui.JettyUtils$$anonfun$2.apply(JettyUtils.scala:204)
+        at org.apache.spark.util.Utils$$anonfun$startServiceOnPort$1.apply$mcVI$sp(Utils.scala:1676)
+        at scala.collection.immutable.Range.foreach$mVc$sp(Range.scala:141)
+        at org.apache.spark.util.Utils$.startServiceOnPort(Utils.scala:1667)
+        at org.apache.spark.ui.JettyUtils$.startJettyServer(JettyUtils.scala:204)
+        at org.apache.spark.ui.WebUI.bind(WebUI.scala:102)
+        at org.apache.spark.SparkContext$$anonfun$10.apply(SparkContext.scala:269)
+        at org.apache.spark.SparkContext$$anonfun$10.apply(SparkContext.scala:269)
+        at scala.Option.foreach(Option.scala:236)
+        at org.apache.spark.SparkContext.<init>(SparkContext.scala:269)
+        at org.apache.spark.repl.SparkILoop.createSparkContext(SparkILoop.scala:986)
+        at $line3.$read$$iwC$$iwC.<init>(<console>:9)
+        at $line3.$read$$iwC.<init>(<console>:18)
+        at $line3.$read.<init>(<console>:20)
+        at $line3.$read$.<init>(<console>:24)
+        at $line3.$read$.<clinit>(<console>)
+        at $line3.$eval$.<init>(<console>:7)
+        at $line3.$eval$.<clinit>(<console>)
+        at $line3.$eval.$print(<console>)
+        at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+        at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:57)
+        at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+        at java.lang.reflect.Method.invoke(Method.java:606)
+        at org.apache.spark.repl.SparkIMain$ReadEvalPrint.call(SparkIMain.scala:852)
+        at org.apache.spark.repl.SparkIMain$Request.loadAndRun(SparkIMain.scala:1125)
+        at org.apache.spark.repl.SparkIMain.loadAndRunReq$1(SparkIMain.scala:674)
+        at org.apache.spark.repl.SparkIMain.interpret(SparkIMain.scala:705)
+        at org.apache.spark.repl.SparkIMain.interpret(SparkIMain.scala:669)
+        at org.apache.spark.repl.SparkILoop.reallyInterpret$1(SparkILoop.scala:828)
+        at org.apache.spark.repl.SparkILoop.interpretStartingWith(SparkILoop.scala:873)
+        at org.apache.spark.repl.SparkILoop.command(SparkILoop.scala:785)
+        at org.apache.spark.repl.SparkILoopInit$$anonfun$initializeSpark$1.apply(SparkILoopInit.scala:123)
+        at org.apache.spark.repl.SparkILoopInit$$anonfun$initializeSpark$1.apply(SparkILoopInit.scala:122)
+        at org.apache.spark.repl.SparkIMain.beQuietDuring(SparkIMain.scala:270)
+        at org.apache.spark.repl.SparkILoopInit$class.initializeSpark(SparkILoopInit.scala:122)
+        at org.apache.spark.repl.SparkILoop.initializeSpark(SparkILoop.scala:60)
+        at org.apache.spark.repl.SparkILoop$$anonfun$process$1$$anonfun$apply$mcZ$sp$5.apply$mcV$sp(SparkILoop.scala:945)
+        at org.apache.spark.repl.SparkILoopInit$class.runThunks(SparkILoopInit.scala:147)
+        at org.apache.spark.repl.SparkILoop.runThunks(SparkILoop.scala:60)
+        at org.apache.spark.repl.SparkILoopInit$class.postInitialization(SparkILoopInit.scala:106)
+        at org.apache.spark.repl.SparkILoop.postInitialization(SparkILoop.scala:60)
+        at org.apache.spark.repl.SparkILoop$$anonfun$process$1.apply$mcZ$sp(SparkILoop.scala:962)
+        at org.apache.spark.repl.SparkILoop$$anonfun$process$1.apply(SparkILoop.scala:916)
+        at org.apache.spark.repl.SparkILoop$$anonfun$process$1.apply(SparkILoop.scala:916)
+        at scala.tools.nsc.util.ScalaClassLoader$.savingContextLoader(ScalaClassLoader.scala:135)
+        at org.apache.spark.repl.SparkILoop.process(SparkILoop.scala:916)
+        at org.apache.spark.repl.SparkILoop.process(SparkILoop.scala:1011)
+        at org.apache.spark.repl.Main$.main(Main.scala:31)
+        at org.apache.spark.repl.Main.main(Main.scala)
+        at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+        at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:57)
+        at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+        at java.lang.reflect.Method.invoke(Method.java:606)
+        at org.apache.spark.deploy.SparkSubmit$.launch(SparkSubmit.scala:358)
+        at org.apache.spark.deploy.SparkSubmit$.main(SparkSubmit.scala:75)
+        at org.apache.spark.deploy.SparkSubmit.main(SparkSubmit.scala)
+15/10/17 18:25:44 INFO handler.ContextHandler: stopped o.e.j.s.ServletContextHandler{/stages/stage/kill,null}
+15/10/17 18:25:44 INFO handler.ContextHandler: stopped o.e.j.s.ServletContextHandler{/,null}
+15/10/17 18:25:44 INFO handler.ContextHandler: stopped o.e.j.s.ServletContextHandler{/static,null}
+15/10/17 18:25:44 INFO handler.ContextHandler: stopped o.e.j.s.ServletContextHandler{/executors/threadDump/json,null}
+15/10/17 18:25:44 INFO handler.ContextHandler: stopped o.e.j.s.ServletContextHandler{/executors/threadDump,null}
+15/10/17 18:25:44 INFO handler.ContextHandler: stopped o.e.j.s.ServletContextHandler{/executors/json,null}
+15/10/17 18:25:44 INFO handler.ContextHandler: stopped o.e.j.s.ServletContextHandler{/executors,null}
+15/10/17 18:25:44 INFO handler.ContextHandler: stopped o.e.j.s.ServletContextHandler{/environment/json,null}
+15/10/17 18:25:44 INFO handler.ContextHandler: stopped o.e.j.s.ServletContextHandler{/environment,null}
+15/10/17 18:25:44 INFO handler.ContextHandler: stopped o.e.j.s.ServletContextHandler{/storage/rdd/json,null}
+15/10/17 18:25:44 INFO handler.ContextHandler: stopped o.e.j.s.ServletContextHandler{/storage/rdd,null}
+15/10/17 18:25:44 INFO handler.ContextHandler: stopped o.e.j.s.ServletContextHandler{/storage/json,null}
+15/10/17 18:25:44 INFO handler.ContextHandler: stopped o.e.j.s.ServletContextHandler{/storage,null}
+15/10/17 18:25:44 INFO handler.ContextHandler: stopped o.e.j.s.ServletContextHandler{/stages/pool/json,null}
+15/10/17 18:25:44 INFO handler.ContextHandler: stopped o.e.j.s.ServletContextHandler{/stages/pool,null}
+15/10/17 18:25:44 INFO handler.ContextHandler: stopped o.e.j.s.ServletContextHandler{/stages/stage/json,null}
+15/10/17 18:25:44 INFO handler.ContextHandler: stopped o.e.j.s.ServletContextHandler{/stages/stage,null}
+15/10/17 18:25:44 INFO handler.ContextHandler: stopped o.e.j.s.ServletContextHandler{/stages/json,null}
+15/10/17 18:25:44 INFO handler.ContextHandler: stopped o.e.j.s.ServletContextHandler{/stages,null}
+15/10/17 18:25:44 INFO handler.ContextHandler: stopped o.e.j.s.ServletContextHandler{/jobs/job/json,null}
+15/10/17 18:25:44 INFO handler.ContextHandler: stopped o.e.j.s.ServletContextHandler{/jobs/job,null}
+15/10/17 18:25:44 INFO handler.ContextHandler: stopped o.e.j.s.ServletContextHandler{/jobs/json,null}
+15/10/17 18:25:44 INFO handler.ContextHandler: stopped o.e.j.s.ServletContextHandler{/jobs,null}
+15/10/17 18:25:44 WARN util.Utils: Service 'SparkUI' could not bind on port 4046. Attempting port 4047.
+15/10/17 18:25:44 INFO server.Server: jetty-8.y.z-SNAPSHOT
+15/10/17 18:25:44 WARN component.AbstractLifeCycle: FAILED SelectChannelConnector@0.0.0.0:4047: java.net.BindException: Address already in use
+java.net.BindException: Address already in use
+        at sun.nio.ch.Net.bind0(Native Method)
+        at sun.nio.ch.Net.bind(Net.java:444)
+        at sun.nio.ch.Net.bind(Net.java:436)
+        at sun.nio.ch.ServerSocketChannelImpl.bind(ServerSocketChannelImpl.java:214)
+        at sun.nio.ch.ServerSocketAdaptor.bind(ServerSocketAdaptor.java:74)
+        at org.eclipse.jetty.server.nio.SelectChannelConnector.open(SelectChannelConnector.java:187)
+        at org.eclipse.jetty.server.AbstractConnector.doStart(AbstractConnector.java:316)
+        at org.eclipse.jetty.server.nio.SelectChannelConnector.doStart(SelectChannelConnector.java:265)
+        at org.eclipse.jetty.util.component.AbstractLifeCycle.start(AbstractLifeCycle.java:64)
+        at org.eclipse.jetty.server.Server.doStart(Server.java:293)
+        at org.eclipse.jetty.util.component.AbstractLifeCycle.start(AbstractLifeCycle.java:64)
+        at org.apache.spark.ui.JettyUtils$.org$apache$spark$ui$JettyUtils$$connect$1(JettyUtils.scala:194)
+        at org.apache.spark.ui.JettyUtils$$anonfun$2.apply(JettyUtils.scala:204)
+        at org.apache.spark.ui.JettyUtils$$anonfun$2.apply(JettyUtils.scala:204)
+        at org.apache.spark.util.Utils$$anonfun$startServiceOnPort$1.apply$mcVI$sp(Utils.scala:1676)
+        at scala.collection.immutable.Range.foreach$mVc$sp(Range.scala:141)
+        at org.apache.spark.util.Utils$.startServiceOnPort(Utils.scala:1667)
+        at org.apache.spark.ui.JettyUtils$.startJettyServer(JettyUtils.scala:204)
+        at org.apache.spark.ui.WebUI.bind(WebUI.scala:102)
+        at org.apache.spark.SparkContext$$anonfun$10.apply(SparkContext.scala:269)
+        at org.apache.spark.SparkContext$$anonfun$10.apply(SparkContext.scala:269)
+        at scala.Option.foreach(Option.scala:236)
+        at org.apache.spark.SparkContext.<init>(SparkContext.scala:269)
+        at org.apache.spark.repl.SparkILoop.createSparkContext(SparkILoop.scala:986)
+        at $line3.$read$$iwC$$iwC.<init>(<console>:9)
+        at $line3.$read$$iwC.<init>(<console>:18)
+        at $line3.$read.<init>(<console>:20)
+        at $line3.$read$.<init>(<console>:24)
+        at $line3.$read$.<clinit>(<console>)
+        at $line3.$eval$.<init>(<console>:7)
+        at $line3.$eval$.<clinit>(<console>)
+        at $line3.$eval.$print(<console>)
+        at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+        at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:57)
+        at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+        at java.lang.reflect.Method.invoke(Method.java:606)
+        at org.apache.spark.repl.SparkIMain$ReadEvalPrint.call(SparkIMain.scala:852)
+        at org.apache.spark.repl.SparkIMain$Request.loadAndRun(SparkIMain.scala:1125)
+        at org.apache.spark.repl.SparkIMain.loadAndRunReq$1(SparkIMain.scala:674)
+        at org.apache.spark.repl.SparkIMain.interpret(SparkIMain.scala:705)
+        at org.apache.spark.repl.SparkIMain.interpret(SparkIMain.scala:669)
+        at org.apache.spark.repl.SparkILoop.reallyInterpret$1(SparkILoop.scala:828)
+        at org.apache.spark.repl.SparkILoop.interpretStartingWith(SparkILoop.scala:873)
+        at org.apache.spark.repl.SparkILoop.command(SparkILoop.scala:785)
+        at org.apache.spark.repl.SparkILoopInit$$anonfun$initializeSpark$1.apply(SparkILoopInit.scala:123)
+        at org.apache.spark.repl.SparkILoopInit$$anonfun$initializeSpark$1.apply(SparkILoopInit.scala:122)
+        at org.apache.spark.repl.SparkIMain.beQuietDuring(SparkIMain.scala:270)
+        at org.apache.spark.repl.SparkILoopInit$class.initializeSpark(SparkILoopInit.scala:122)
+        at org.apache.spark.repl.SparkILoop.initializeSpark(SparkILoop.scala:60)
+        at org.apache.spark.repl.SparkILoop$$anonfun$process$1$$anonfun$apply$mcZ$sp$5.apply$mcV$sp(SparkILoop.scala:945)
+        at org.apache.spark.repl.SparkILoopInit$class.runThunks(SparkILoopInit.scala:147)
+        at org.apache.spark.repl.SparkILoop.runThunks(SparkILoop.scala:60)
+        at org.apache.spark.repl.SparkILoopInit$class.postInitialization(SparkILoopInit.scala:106)
+        at org.apache.spark.repl.SparkILoop.postInitialization(SparkILoop.scala:60)
+        at org.apache.spark.repl.SparkILoop$$anonfun$process$1.apply$mcZ$sp(SparkILoop.scala:962)
+        at org.apache.spark.repl.SparkILoop$$anonfun$process$1.apply(SparkILoop.scala:916)
+        at org.apache.spark.repl.SparkILoop$$anonfun$process$1.apply(SparkILoop.scala:916)
+        at scala.tools.nsc.util.ScalaClassLoader$.savingContextLoader(ScalaClassLoader.scala:135)
+        at org.apache.spark.repl.SparkILoop.process(SparkILoop.scala:916)
+        at org.apache.spark.repl.SparkILoop.process(SparkILoop.scala:1011)
+        at org.apache.spark.repl.Main$.main(Main.scala:31)
+        at org.apache.spark.repl.Main.main(Main.scala)
+        at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+        at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:57)
+        at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+        at java.lang.reflect.Method.invoke(Method.java:606)
+        at org.apache.spark.deploy.SparkSubmit$.launch(SparkSubmit.scala:358)
+        at org.apache.spark.deploy.SparkSubmit$.main(SparkSubmit.scala:75)
+        at org.apache.spark.deploy.SparkSubmit.main(SparkSubmit.scala)
+15/10/17 18:25:44 WARN component.AbstractLifeCycle: FAILED org.eclipse.jetty.server.Server@2def5621: java.net.BindException: Address already in use
+java.net.BindException: Address already in use
+        at sun.nio.ch.Net.bind0(Native Method)
+        at sun.nio.ch.Net.bind(Net.java:444)
+        at sun.nio.ch.Net.bind(Net.java:436)
+        at sun.nio.ch.ServerSocketChannelImpl.bind(ServerSocketChannelImpl.java:214)
+        at sun.nio.ch.ServerSocketAdaptor.bind(ServerSocketAdaptor.java:74)
+        at org.eclipse.jetty.server.nio.SelectChannelConnector.open(SelectChannelConnector.java:187)
+        at org.eclipse.jetty.server.AbstractConnector.doStart(AbstractConnector.java:316)
+        at org.eclipse.jetty.server.nio.SelectChannelConnector.doStart(SelectChannelConnector.java:265)
+        at org.eclipse.jetty.util.component.AbstractLifeCycle.start(AbstractLifeCycle.java:64)
+        at org.eclipse.jetty.server.Server.doStart(Server.java:293)
+        at org.eclipse.jetty.util.component.AbstractLifeCycle.start(AbstractLifeCycle.java:64)
+        at org.apache.spark.ui.JettyUtils$.org$apache$spark$ui$JettyUtils$$connect$1(JettyUtils.scala:194)
+        at org.apache.spark.ui.JettyUtils$$anonfun$2.apply(JettyUtils.scala:204)
+        at org.apache.spark.ui.JettyUtils$$anonfun$2.apply(JettyUtils.scala:204)
+        at org.apache.spark.util.Utils$$anonfun$startServiceOnPort$1.apply$mcVI$sp(Utils.scala:1676)
+        at scala.collection.immutable.Range.foreach$mVc$sp(Range.scala:141)
+        at org.apache.spark.util.Utils$.startServiceOnPort(Utils.scala:1667)
+        at org.apache.spark.ui.JettyUtils$.startJettyServer(JettyUtils.scala:204)
+        at org.apache.spark.ui.WebUI.bind(WebUI.scala:102)
+        at org.apache.spark.SparkContext$$anonfun$10.apply(SparkContext.scala:269)
+        at org.apache.spark.SparkContext$$anonfun$10.apply(SparkContext.scala:269)
+        at scala.Option.foreach(Option.scala:236)
+        at org.apache.spark.SparkContext.<init>(SparkContext.scala:269)
+        at org.apache.spark.repl.SparkILoop.createSparkContext(SparkILoop.scala:986)
+        at $line3.$read$$iwC$$iwC.<init>(<console>:9)
+        at $line3.$read$$iwC.<init>(<console>:18)
+        at $line3.$read.<init>(<console>:20)
+        at $line3.$read$.<init>(<console>:24)
+        at $line3.$read$.<clinit>(<console>)
+        at $line3.$eval$.<init>(<console>:7)
+        at $line3.$eval$.<clinit>(<console>)
+        at $line3.$eval.$print(<console>)
+        at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+        at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:57)
+        at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+        at java.lang.reflect.Method.invoke(Method.java:606)
+        at org.apache.spark.repl.SparkIMain$ReadEvalPrint.call(SparkIMain.scala:852)
+        at org.apache.spark.repl.SparkIMain$Request.loadAndRun(SparkIMain.scala:1125)
+        at org.apache.spark.repl.SparkIMain.loadAndRunReq$1(SparkIMain.scala:674)
+        at org.apache.spark.repl.SparkIMain.interpret(SparkIMain.scala:705)
+        at org.apache.spark.repl.SparkIMain.interpret(SparkIMain.scala:669)
+        at org.apache.spark.repl.SparkILoop.reallyInterpret$1(SparkILoop.scala:828)
+        at org.apache.spark.repl.SparkILoop.interpretStartingWith(SparkILoop.scala:873)
+        at org.apache.spark.repl.SparkILoop.command(SparkILoop.scala:785)
+        at org.apache.spark.repl.SparkILoopInit$$anonfun$initializeSpark$1.apply(SparkILoopInit.scala:123)
+        at org.apache.spark.repl.SparkILoopInit$$anonfun$initializeSpark$1.apply(SparkILoopInit.scala:122)
+        at org.apache.spark.repl.SparkIMain.beQuietDuring(SparkIMain.scala:270)
+        at org.apache.spark.repl.SparkILoopInit$class.initializeSpark(SparkILoopInit.scala:122)
+        at org.apache.spark.repl.SparkILoop.initializeSpark(SparkILoop.scala:60)
+        at org.apache.spark.repl.SparkILoop$$anonfun$process$1$$anonfun$apply$mcZ$sp$5.apply$mcV$sp(SparkILoop.scala:945)
+        at org.apache.spark.repl.SparkILoopInit$class.runThunks(SparkILoopInit.scala:147)
+        at org.apache.spark.repl.SparkILoop.runThunks(SparkILoop.scala:60)
+        at org.apache.spark.repl.SparkILoopInit$class.postInitialization(SparkILoopInit.scala:106)
+        at org.apache.spark.repl.SparkILoop.postInitialization(SparkILoop.scala:60)
+        at org.apache.spark.repl.SparkILoop$$anonfun$process$1.apply$mcZ$sp(SparkILoop.scala:962)
+        at org.apache.spark.repl.SparkILoop$$anonfun$process$1.apply(SparkILoop.scala:916)
+        at org.apache.spark.repl.SparkILoop$$anonfun$process$1.apply(SparkILoop.scala:916)
+        at scala.tools.nsc.util.ScalaClassLoader$.savingContextLoader(ScalaClassLoader.scala:135)
+        at org.apache.spark.repl.SparkILoop.process(SparkILoop.scala:916)
+        at org.apache.spark.repl.SparkILoop.process(SparkILoop.scala:1011)
+        at org.apache.spark.repl.Main$.main(Main.scala:31)
+        at org.apache.spark.repl.Main.main(Main.scala)
+        at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+        at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:57)
+        at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+        at java.lang.reflect.Method.invoke(Method.java:606)
+        at org.apache.spark.deploy.SparkSubmit$.launch(SparkSubmit.scala:358)
+        at org.apache.spark.deploy.SparkSubmit$.main(SparkSubmit.scala:75)
+        at org.apache.spark.deploy.SparkSubmit.main(SparkSubmit.scala)
+15/10/17 18:25:44 INFO handler.ContextHandler: stopped o.e.j.s.ServletContextHandler{/stages/stage/kill,null}
+15/10/17 18:25:44 INFO handler.ContextHandler: stopped o.e.j.s.ServletContextHandler{/,null}
+15/10/17 18:25:44 INFO handler.ContextHandler: stopped o.e.j.s.ServletContextHandler{/static,null}
+15/10/17 18:25:44 INFO handler.ContextHandler: stopped o.e.j.s.ServletContextHandler{/executors/threadDump/json,null}
+15/10/17 18:25:44 INFO handler.ContextHandler: stopped o.e.j.s.ServletContextHandler{/executors/threadDump,null}
+15/10/17 18:25:44 INFO handler.ContextHandler: stopped o.e.j.s.ServletContextHandler{/executors/json,null}
+15/10/17 18:25:44 INFO handler.ContextHandler: stopped o.e.j.s.ServletContextHandler{/executors,null}
+15/10/17 18:25:44 INFO handler.ContextHandler: stopped o.e.j.s.ServletContextHandler{/environment/json,null}
+15/10/17 18:25:44 INFO handler.ContextHandler: stopped o.e.j.s.ServletContextHandler{/environment,null}
+15/10/17 18:25:44 INFO handler.ContextHandler: stopped o.e.j.s.ServletContextHandler{/storage/rdd/json,null}
+15/10/17 18:25:44 INFO handler.ContextHandler: stopped o.e.j.s.ServletContextHandler{/storage/rdd,null}
+15/10/17 18:25:44 INFO handler.ContextHandler: stopped o.e.j.s.ServletContextHandler{/storage/json,null}
+15/10/17 18:25:44 INFO handler.ContextHandler: stopped o.e.j.s.ServletContextHandler{/storage,null}
+15/10/17 18:25:44 INFO handler.ContextHandler: stopped o.e.j.s.ServletContextHandler{/stages/pool/json,null}
+15/10/17 18:25:44 INFO handler.ContextHandler: stopped o.e.j.s.ServletContextHandler{/stages/pool,null}
+15/10/17 18:25:44 INFO handler.ContextHandler: stopped o.e.j.s.ServletContextHandler{/stages/stage/json,null}
+15/10/17 18:25:44 INFO handler.ContextHandler: stopped o.e.j.s.ServletContextHandler{/stages/stage,null}
+15/10/17 18:25:44 INFO handler.ContextHandler: stopped o.e.j.s.ServletContextHandler{/stages/json,null}
+15/10/17 18:25:44 INFO handler.ContextHandler: stopped o.e.j.s.ServletContextHandler{/stages,null}
+15/10/17 18:25:44 INFO handler.ContextHandler: stopped o.e.j.s.ServletContextHandler{/jobs/job/json,null}
+15/10/17 18:25:44 INFO handler.ContextHandler: stopped o.e.j.s.ServletContextHandler{/jobs/job,null}
+15/10/17 18:25:44 INFO handler.ContextHandler: stopped o.e.j.s.ServletContextHandler{/jobs/json,null}
+15/10/17 18:25:44 INFO handler.ContextHandler: stopped o.e.j.s.ServletContextHandler{/jobs,null}
+15/10/17 18:25:44 WARN util.Utils: Service 'SparkUI' could not bind on port 4047. Attempting port 4048.
+15/10/17 18:25:44 INFO server.Server: jetty-8.y.z-SNAPSHOT
+15/10/17 18:25:44 WARN component.AbstractLifeCycle: FAILED SelectChannelConnector@0.0.0.0:4048: java.net.BindException: Address already in use
+java.net.BindException: Address already in use
+        at sun.nio.ch.Net.bind0(Native Method)
+        at sun.nio.ch.Net.bind(Net.java:444)
+        at sun.nio.ch.Net.bind(Net.java:436)
+        at sun.nio.ch.ServerSocketChannelImpl.bind(ServerSocketChannelImpl.java:214)
+        at sun.nio.ch.ServerSocketAdaptor.bind(ServerSocketAdaptor.java:74)
+        at org.eclipse.jetty.server.nio.SelectChannelConnector.open(SelectChannelConnector.java:187)
+        at org.eclipse.jetty.server.AbstractConnector.doStart(AbstractConnector.java:316)
+        at org.eclipse.jetty.server.nio.SelectChannelConnector.doStart(SelectChannelConnector.java:265)
+        at org.eclipse.jetty.util.component.AbstractLifeCycle.start(AbstractLifeCycle.java:64)
+        at org.eclipse.jetty.server.Server.doStart(Server.java:293)
+        at org.eclipse.jetty.util.component.AbstractLifeCycle.start(AbstractLifeCycle.java:64)
+        at org.apache.spark.ui.JettyUtils$.org$apache$spark$ui$JettyUtils$$connect$1(JettyUtils.scala:194)
+        at org.apache.spark.ui.JettyUtils$$anonfun$2.apply(JettyUtils.scala:204)
+        at org.apache.spark.ui.JettyUtils$$anonfun$2.apply(JettyUtils.scala:204)
+        at org.apache.spark.util.Utils$$anonfun$startServiceOnPort$1.apply$mcVI$sp(Utils.scala:1676)
+        at scala.collection.immutable.Range.foreach$mVc$sp(Range.scala:141)
+        at org.apache.spark.util.Utils$.startServiceOnPort(Utils.scala:1667)
+        at org.apache.spark.ui.JettyUtils$.startJettyServer(JettyUtils.scala:204)
+        at org.apache.spark.ui.WebUI.bind(WebUI.scala:102)
+        at org.apache.spark.SparkContext$$anonfun$10.apply(SparkContext.scala:269)
+        at org.apache.spark.SparkContext$$anonfun$10.apply(SparkContext.scala:269)
+        at scala.Option.foreach(Option.scala:236)
+        at org.apache.spark.SparkContext.<init>(SparkContext.scala:269)
+        at org.apache.spark.repl.SparkILoop.createSparkContext(SparkILoop.scala:986)
+        at $line3.$read$$iwC$$iwC.<init>(<console>:9)
+        at $line3.$read$$iwC.<init>(<console>:18)
+        at $line3.$read.<init>(<console>:20)
+        at $line3.$read$.<init>(<console>:24)
+        at $line3.$read$.<clinit>(<console>)
+        at $line3.$eval$.<init>(<console>:7)
+        at $line3.$eval$.<clinit>(<console>)
+        at $line3.$eval.$print(<console>)
+        at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+        at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:57)
+        at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+        at java.lang.reflect.Method.invoke(Method.java:606)
+        at org.apache.spark.repl.SparkIMain$ReadEvalPrint.call(SparkIMain.scala:852)
+        at org.apache.spark.repl.SparkIMain$Request.loadAndRun(SparkIMain.scala:1125)
+        at org.apache.spark.repl.SparkIMain.loadAndRunReq$1(SparkIMain.scala:674)
+        at org.apache.spark.repl.SparkIMain.interpret(SparkIMain.scala:705)
+        at org.apache.spark.repl.SparkIMain.interpret(SparkIMain.scala:669)
+        at org.apache.spark.repl.SparkILoop.reallyInterpret$1(SparkILoop.scala:828)
+        at org.apache.spark.repl.SparkILoop.interpretStartingWith(SparkILoop.scala:873)
+        at org.apache.spark.repl.SparkILoop.command(SparkILoop.scala:785)
+        at org.apache.spark.repl.SparkILoopInit$$anonfun$initializeSpark$1.apply(SparkILoopInit.scala:123)
+        at org.apache.spark.repl.SparkILoopInit$$anonfun$initializeSpark$1.apply(SparkILoopInit.scala:122)
+        at org.apache.spark.repl.SparkIMain.beQuietDuring(SparkIMain.scala:270)
+        at org.apache.spark.repl.SparkILoopInit$class.initializeSpark(SparkILoopInit.scala:122)
+        at org.apache.spark.repl.SparkILoop.initializeSpark(SparkILoop.scala:60)
+        at org.apache.spark.repl.SparkILoop$$anonfun$process$1$$anonfun$apply$mcZ$sp$5.apply$mcV$sp(SparkILoop.scala:945)
+        at org.apache.spark.repl.SparkILoopInit$class.runThunks(SparkILoopInit.scala:147)
+        at org.apache.spark.repl.SparkILoop.runThunks(SparkILoop.scala:60)
+        at org.apache.spark.repl.SparkILoopInit$class.postInitialization(SparkILoopInit.scala:106)
+        at org.apache.spark.repl.SparkILoop.postInitialization(SparkILoop.scala:60)
+        at org.apache.spark.repl.SparkILoop$$anonfun$process$1.apply$mcZ$sp(SparkILoop.scala:962)
+        at org.apache.spark.repl.SparkILoop$$anonfun$process$1.apply(SparkILoop.scala:916)
+        at org.apache.spark.repl.SparkILoop$$anonfun$process$1.apply(SparkILoop.scala:916)
+        at scala.tools.nsc.util.ScalaClassLoader$.savingContextLoader(ScalaClassLoader.scala:135)
+        at org.apache.spark.repl.SparkILoop.process(SparkILoop.scala:916)
+        at org.apache.spark.repl.SparkILoop.process(SparkILoop.scala:1011)
+        at org.apache.spark.repl.Main$.main(Main.scala:31)
+        at org.apache.spark.repl.Main.main(Main.scala)
+        at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+        at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:57)
+        at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+        at java.lang.reflect.Method.invoke(Method.java:606)
+        at org.apache.spark.deploy.SparkSubmit$.launch(SparkSubmit.scala:358)
+        at org.apache.spark.deploy.SparkSubmit$.main(SparkSubmit.scala:75)
+        at org.apache.spark.deploy.SparkSubmit.main(SparkSubmit.scala)
+15/10/17 18:25:44 WARN component.AbstractLifeCycle: FAILED org.eclipse.jetty.server.Server@3c402647: java.net.BindException: Address already in use
+java.net.BindException: Address already in use
+        at sun.nio.ch.Net.bind0(Native Method)
+        at sun.nio.ch.Net.bind(Net.java:444)
+        at sun.nio.ch.Net.bind(Net.java:436)
+        at sun.nio.ch.ServerSocketChannelImpl.bind(ServerSocketChannelImpl.java:214)
+        at sun.nio.ch.ServerSocketAdaptor.bind(ServerSocketAdaptor.java:74)
+        at org.eclipse.jetty.server.nio.SelectChannelConnector.open(SelectChannelConnector.java:187)
+        at org.eclipse.jetty.server.AbstractConnector.doStart(AbstractConnector.java:316)
+        at org.eclipse.jetty.server.nio.SelectChannelConnector.doStart(SelectChannelConnector.java:265)
+        at org.eclipse.jetty.util.component.AbstractLifeCycle.start(AbstractLifeCycle.java:64)
+        at org.eclipse.jetty.server.Server.doStart(Server.java:293)
+        at org.eclipse.jetty.util.component.AbstractLifeCycle.start(AbstractLifeCycle.java:64)
+        at org.apache.spark.ui.JettyUtils$.org$apache$spark$ui$JettyUtils$$connect$1(JettyUtils.scala:194)
+        at org.apache.spark.ui.JettyUtils$$anonfun$2.apply(JettyUtils.scala:204)
+        at org.apache.spark.ui.JettyUtils$$anonfun$2.apply(JettyUtils.scala:204)
+        at org.apache.spark.util.Utils$$anonfun$startServiceOnPort$1.apply$mcVI$sp(Utils.scala:1676)
+        at scala.collection.immutable.Range.foreach$mVc$sp(Range.scala:141)
+        at org.apache.spark.util.Utils$.startServiceOnPort(Utils.scala:1667)
+        at org.apache.spark.ui.JettyUtils$.startJettyServer(JettyUtils.scala:204)
+        at org.apache.spark.ui.WebUI.bind(WebUI.scala:102)
+        at org.apache.spark.SparkContext$$anonfun$10.apply(SparkContext.scala:269)
+        at org.apache.spark.SparkContext$$anonfun$10.apply(SparkContext.scala:269)
+        at scala.Option.foreach(Option.scala:236)
+        at org.apache.spark.SparkContext.<init>(SparkContext.scala:269)
+        at org.apache.spark.repl.SparkILoop.createSparkContext(SparkILoop.scala:986)
+        at $line3.$read$$iwC$$iwC.<init>(<console>:9)
+        at $line3.$read$$iwC.<init>(<console>:18)
+        at $line3.$read.<init>(<console>:20)
+        at $line3.$read$.<init>(<console>:24)
+        at $line3.$read$.<clinit>(<console>)
+        at $line3.$eval$.<init>(<console>:7)
+        at $line3.$eval$.<clinit>(<console>)
+        at $line3.$eval.$print(<console>)
+        at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+        at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:57)
+        at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+        at java.lang.reflect.Method.invoke(Method.java:606)
+        at org.apache.spark.repl.SparkIMain$ReadEvalPrint.call(SparkIMain.scala:852)
+        at org.apache.spark.repl.SparkIMain$Request.loadAndRun(SparkIMain.scala:1125)
+        at org.apache.spark.repl.SparkIMain.loadAndRunReq$1(SparkIMain.scala:674)
+        at org.apache.spark.repl.SparkIMain.interpret(SparkIMain.scala:705)
+        at org.apache.spark.repl.SparkIMain.interpret(SparkIMain.scala:669)
+        at org.apache.spark.repl.SparkILoop.reallyInterpret$1(SparkILoop.scala:828)
+        at org.apache.spark.repl.SparkILoop.interpretStartingWith(SparkILoop.scala:873)
+        at org.apache.spark.repl.SparkILoop.command(SparkILoop.scala:785)
+        at org.apache.spark.repl.SparkILoopInit$$anonfun$initializeSpark$1.apply(SparkILoopInit.scala:123)
+        at org.apache.spark.repl.SparkILoopInit$$anonfun$initializeSpark$1.apply(SparkILoopInit.scala:122)
+        at org.apache.spark.repl.SparkIMain.beQuietDuring(SparkIMain.scala:270)
+        at org.apache.spark.repl.SparkILoopInit$class.initializeSpark(SparkILoopInit.scala:122)
+        at org.apache.spark.repl.SparkILoop.initializeSpark(SparkILoop.scala:60)
+        at org.apache.spark.repl.SparkILoop$$anonfun$process$1$$anonfun$apply$mcZ$sp$5.apply$mcV$sp(SparkILoop.scala:945)
+        at org.apache.spark.repl.SparkILoopInit$class.runThunks(SparkILoopInit.scala:147)
+        at org.apache.spark.repl.SparkILoop.runThunks(SparkILoop.scala:60)
+        at org.apache.spark.repl.SparkILoopInit$class.postInitialization(SparkILoopInit.scala:106)
+        at org.apache.spark.repl.SparkILoop.postInitialization(SparkILoop.scala:60)
+        at org.apache.spark.repl.SparkILoop$$anonfun$process$1.apply$mcZ$sp(SparkILoop.scala:962)
+        at org.apache.spark.repl.SparkILoop$$anonfun$process$1.apply(SparkILoop.scala:916)
+        at org.apache.spark.repl.SparkILoop$$anonfun$process$1.apply(SparkILoop.scala:916)
+        at scala.tools.nsc.util.ScalaClassLoader$.savingContextLoader(ScalaClassLoader.scala:135)
+        at org.apache.spark.repl.SparkILoop.process(SparkILoop.scala:916)
+        at org.apache.spark.repl.SparkILoop.process(SparkILoop.scala:1011)
+        at org.apache.spark.repl.Main$.main(Main.scala:31)
+        at org.apache.spark.repl.Main.main(Main.scala)
+        at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+        at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:57)
+        at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+        at java.lang.reflect.Method.invoke(Method.java:606)
+        at org.apache.spark.deploy.SparkSubmit$.launch(SparkSubmit.scala:358)
+        at org.apache.spark.deploy.SparkSubmit$.main(SparkSubmit.scala:75)
+        at org.apache.spark.deploy.SparkSubmit.main(SparkSubmit.scala)
+15/10/17 18:25:44 INFO handler.ContextHandler: stopped o.e.j.s.ServletContextHandler{/stages/stage/kill,null}
+15/10/17 18:25:44 INFO handler.ContextHandler: stopped o.e.j.s.ServletContextHandler{/,null}
+15/10/17 18:25:44 INFO handler.ContextHandler: stopped o.e.j.s.ServletContextHandler{/static,null}
+15/10/17 18:25:44 INFO handler.ContextHandler: stopped o.e.j.s.ServletContextHandler{/executors/threadDump/json,null}
+15/10/17 18:25:44 INFO handler.ContextHandler: stopped o.e.j.s.ServletContextHandler{/executors/threadDump,null}
+15/10/17 18:25:44 INFO handler.ContextHandler: stopped o.e.j.s.ServletContextHandler{/executors/json,null}
+15/10/17 18:25:44 INFO handler.ContextHandler: stopped o.e.j.s.ServletContextHandler{/executors,null}
+15/10/17 18:25:44 INFO handler.ContextHandler: stopped o.e.j.s.ServletContextHandler{/environment/json,null}
+15/10/17 18:25:44 INFO handler.ContextHandler: stopped o.e.j.s.ServletContextHandler{/environment,null}
+15/10/17 18:25:44 INFO handler.ContextHandler: stopped o.e.j.s.ServletContextHandler{/storage/rdd/json,null}
+15/10/17 18:25:44 INFO handler.ContextHandler: stopped o.e.j.s.ServletContextHandler{/storage/rdd,null}
+15/10/17 18:25:44 INFO handler.ContextHandler: stopped o.e.j.s.ServletContextHandler{/storage/json,null}
+15/10/17 18:25:44 INFO handler.ContextHandler: stopped o.e.j.s.ServletContextHandler{/storage,null}
+15/10/17 18:25:44 INFO handler.ContextHandler: stopped o.e.j.s.ServletContextHandler{/stages/pool/json,null}
+15/10/17 18:25:44 INFO handler.ContextHandler: stopped o.e.j.s.ServletContextHandler{/stages/pool,null}
+15/10/17 18:25:44 INFO handler.ContextHandler: stopped o.e.j.s.ServletContextHandler{/stages/stage/json,null}
+15/10/17 18:25:44 INFO handler.ContextHandler: stopped o.e.j.s.ServletContextHandler{/stages/stage,null}
+15/10/17 18:25:44 INFO handler.ContextHandler: stopped o.e.j.s.ServletContextHandler{/stages/json,null}
+15/10/17 18:25:44 INFO handler.ContextHandler: stopped o.e.j.s.ServletContextHandler{/stages,null}
+15/10/17 18:25:44 INFO handler.ContextHandler: stopped o.e.j.s.ServletContextHandler{/jobs/job/json,null}
+15/10/17 18:25:44 INFO handler.ContextHandler: stopped o.e.j.s.ServletContextHandler{/jobs/job,null}
+15/10/17 18:25:44 INFO handler.ContextHandler: stopped o.e.j.s.ServletContextHandler{/jobs/json,null}
+15/10/17 18:25:44 INFO handler.ContextHandler: stopped o.e.j.s.ServletContextHandler{/jobs,null}
+15/10/17 18:25:44 WARN util.Utils: Service 'SparkUI' could not bind on port 4048. Attempting port 4049.
+15/10/17 18:25:44 INFO server.Server: jetty-8.y.z-SNAPSHOT
+15/10/17 18:25:44 WARN component.AbstractLifeCycle: FAILED SelectChannelConnector@0.0.0.0:4049: java.net.BindException: Address already in use
+java.net.BindException: Address already in use
+        at sun.nio.ch.Net.bind0(Native Method)
+        at sun.nio.ch.Net.bind(Net.java:444)
+        at sun.nio.ch.Net.bind(Net.java:436)
+        at sun.nio.ch.ServerSocketChannelImpl.bind(ServerSocketChannelImpl.java:214)
+        at sun.nio.ch.ServerSocketAdaptor.bind(ServerSocketAdaptor.java:74)
+        at org.eclipse.jetty.server.nio.SelectChannelConnector.open(SelectChannelConnector.java:187)
+        at org.eclipse.jetty.server.AbstractConnector.doStart(AbstractConnector.java:316)
+        at org.eclipse.jetty.server.nio.SelectChannelConnector.doStart(SelectChannelConnector.java:265)
+        at org.eclipse.jetty.util.component.AbstractLifeCycle.start(AbstractLifeCycle.java:64)
+        at org.eclipse.jetty.server.Server.doStart(Server.java:293)
+        at org.eclipse.jetty.util.component.AbstractLifeCycle.start(AbstractLifeCycle.java:64)
+        at org.apache.spark.ui.JettyUtils$.org$apache$spark$ui$JettyUtils$$connect$1(JettyUtils.scala:194)
+        at org.apache.spark.ui.JettyUtils$$anonfun$2.apply(JettyUtils.scala:204)
+        at org.apache.spark.ui.JettyUtils$$anonfun$2.apply(JettyUtils.scala:204)
+        at org.apache.spark.util.Utils$$anonfun$startServiceOnPort$1.apply$mcVI$sp(Utils.scala:1676)
+        at scala.collection.immutable.Range.foreach$mVc$sp(Range.scala:141)
+        at org.apache.spark.util.Utils$.startServiceOnPort(Utils.scala:1667)
+        at org.apache.spark.ui.JettyUtils$.startJettyServer(JettyUtils.scala:204)
+        at org.apache.spark.ui.WebUI.bind(WebUI.scala:102)
+        at org.apache.spark.SparkContext$$anonfun$10.apply(SparkContext.scala:269)
+        at org.apache.spark.SparkContext$$anonfun$10.apply(SparkContext.scala:269)
+        at scala.Option.foreach(Option.scala:236)
+        at org.apache.spark.SparkContext.<init>(SparkContext.scala:269)
+        at org.apache.spark.repl.SparkILoop.createSparkContext(SparkILoop.scala:986)
+        at $line3.$read$$iwC$$iwC.<init>(<console>:9)
+        at $line3.$read$$iwC.<init>(<console>:18)
+        at $line3.$read.<init>(<console>:20)
+        at $line3.$read$.<init>(<console>:24)
+        at $line3.$read$.<clinit>(<console>)
+        at $line3.$eval$.<init>(<console>:7)
+        at $line3.$eval$.<clinit>(<console>)
+        at $line3.$eval.$print(<console>)
+        at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+        at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:57)
+        at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+        at java.lang.reflect.Method.invoke(Method.java:606)
+        at org.apache.spark.repl.SparkIMain$ReadEvalPrint.call(SparkIMain.scala:852)
+        at org.apache.spark.repl.SparkIMain$Request.loadAndRun(SparkIMain.scala:1125)
+        at org.apache.spark.repl.SparkIMain.loadAndRunReq$1(SparkIMain.scala:674)
+        at org.apache.spark.repl.SparkIMain.interpret(SparkIMain.scala:705)
+        at org.apache.spark.repl.SparkIMain.interpret(SparkIMain.scala:669)
+        at org.apache.spark.repl.SparkILoop.reallyInterpret$1(SparkILoop.scala:828)
+        at org.apache.spark.repl.SparkILoop.interpretStartingWith(SparkILoop.scala:873)
+        at org.apache.spark.repl.SparkILoop.command(SparkILoop.scala:785)
+        at org.apache.spark.repl.SparkILoopInit$$anonfun$initializeSpark$1.apply(SparkILoopInit.scala:123)
+        at org.apache.spark.repl.SparkILoopInit$$anonfun$initializeSpark$1.apply(SparkILoopInit.scala:122)
+        at org.apache.spark.repl.SparkIMain.beQuietDuring(SparkIMain.scala:270)
+        at org.apache.spark.repl.SparkILoopInit$class.initializeSpark(SparkILoopInit.scala:122)
+        at org.apache.spark.repl.SparkILoop.initializeSpark(SparkILoop.scala:60)
+        at org.apache.spark.repl.SparkILoop$$anonfun$process$1$$anonfun$apply$mcZ$sp$5.apply$mcV$sp(SparkILoop.scala:945)
+        at org.apache.spark.repl.SparkILoopInit$class.runThunks(SparkILoopInit.scala:147)
+        at org.apache.spark.repl.SparkILoop.runThunks(SparkILoop.scala:60)
+        at org.apache.spark.repl.SparkILoopInit$class.postInitialization(SparkILoopInit.scala:106)
+        at org.apache.spark.repl.SparkILoop.postInitialization(SparkILoop.scala:60)
+        at org.apache.spark.repl.SparkILoop$$anonfun$process$1.apply$mcZ$sp(SparkILoop.scala:962)
+        at org.apache.spark.repl.SparkILoop$$anonfun$process$1.apply(SparkILoop.scala:916)
+        at org.apache.spark.repl.SparkILoop$$anonfun$process$1.apply(SparkILoop.scala:916)
+        at scala.tools.nsc.util.ScalaClassLoader$.savingContextLoader(ScalaClassLoader.scala:135)
+        at org.apache.spark.repl.SparkILoop.process(SparkILoop.scala:916)
+        at org.apache.spark.repl.SparkILoop.process(SparkILoop.scala:1011)
+        at org.apache.spark.repl.Main$.main(Main.scala:31)
+        at org.apache.spark.repl.Main.main(Main.scala)
+        at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+        at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:57)
+        at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+        at java.lang.reflect.Method.invoke(Method.java:606)
+        at org.apache.spark.deploy.SparkSubmit$.launch(SparkSubmit.scala:358)
+        at org.apache.spark.deploy.SparkSubmit$.main(SparkSubmit.scala:75)
+        at org.apache.spark.deploy.SparkSubmit.main(SparkSubmit.scala)
+15/10/17 18:25:44 WARN component.AbstractLifeCycle: FAILED org.eclipse.jetty.server.Server@18dcdff9: java.net.BindException: Address already in use
+java.net.BindException: Address already in use
+        at sun.nio.ch.Net.bind0(Native Method)
+        at sun.nio.ch.Net.bind(Net.java:444)
+        at sun.nio.ch.Net.bind(Net.java:436)
+        at sun.nio.ch.ServerSocketChannelImpl.bind(ServerSocketChannelImpl.java:214)
+        at sun.nio.ch.ServerSocketAdaptor.bind(ServerSocketAdaptor.java:74)
+        at org.eclipse.jetty.server.nio.SelectChannelConnector.open(SelectChannelConnector.java:187)
+        at org.eclipse.jetty.server.AbstractConnector.doStart(AbstractConnector.java:316)
+        at org.eclipse.jetty.server.nio.SelectChannelConnector.doStart(SelectChannelConnector.java:265)
+        at org.eclipse.jetty.util.component.AbstractLifeCycle.start(AbstractLifeCycle.java:64)
+        at org.eclipse.jetty.server.Server.doStart(Server.java:293)
+        at org.eclipse.jetty.util.component.AbstractLifeCycle.start(AbstractLifeCycle.java:64)
+        at org.apache.spark.ui.JettyUtils$.org$apache$spark$ui$JettyUtils$$connect$1(JettyUtils.scala:194)
+        at org.apache.spark.ui.JettyUtils$$anonfun$2.apply(JettyUtils.scala:204)
+        at org.apache.spark.ui.JettyUtils$$anonfun$2.apply(JettyUtils.scala:204)
+        at org.apache.spark.util.Utils$$anonfun$startServiceOnPort$1.apply$mcVI$sp(Utils.scala:1676)
+        at scala.collection.immutable.Range.foreach$mVc$sp(Range.scala:141)
+        at org.apache.spark.util.Utils$.startServiceOnPort(Utils.scala:1667)
+        at org.apache.spark.ui.JettyUtils$.startJettyServer(JettyUtils.scala:204)
+        at org.apache.spark.ui.WebUI.bind(WebUI.scala:102)
+        at org.apache.spark.SparkContext$$anonfun$10.apply(SparkContext.scala:269)
+        at org.apache.spark.SparkContext$$anonfun$10.apply(SparkContext.scala:269)
+        at scala.Option.foreach(Option.scala:236)
+        at org.apache.spark.SparkContext.<init>(SparkContext.scala:269)
+        at org.apache.spark.repl.SparkILoop.createSparkContext(SparkILoop.scala:986)
+        at $line3.$read$$iwC$$iwC.<init>(<console>:9)
+        at $line3.$read$$iwC.<init>(<console>:18)
+        at $line3.$read.<init>(<console>:20)
+        at $line3.$read$.<init>(<console>:24)
+        at $line3.$read$.<clinit>(<console>)
+        at $line3.$eval$.<init>(<console>:7)
+        at $line3.$eval$.<clinit>(<console>)
+        at $line3.$eval.$print(<console>)
+        at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+        at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:57)
+        at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+        at java.lang.reflect.Method.invoke(Method.java:606)
+        at org.apache.spark.repl.SparkIMain$ReadEvalPrint.call(SparkIMain.scala:852)
+        at org.apache.spark.repl.SparkIMain$Request.loadAndRun(SparkIMain.scala:1125)
+        at org.apache.spark.repl.SparkIMain.loadAndRunReq$1(SparkIMain.scala:674)
+        at org.apache.spark.repl.SparkIMain.interpret(SparkIMain.scala:705)
+        at org.apache.spark.repl.SparkIMain.interpret(SparkIMain.scala:669)
+        at org.apache.spark.repl.SparkILoop.reallyInterpret$1(SparkILoop.scala:828)
+        at org.apache.spark.repl.SparkILoop.interpretStartingWith(SparkILoop.scala:873)
+        at org.apache.spark.repl.SparkILoop.command(SparkILoop.scala:785)
+        at org.apache.spark.repl.SparkILoopInit$$anonfun$initializeSpark$1.apply(SparkILoopInit.scala:123)
+        at org.apache.spark.repl.SparkILoopInit$$anonfun$initializeSpark$1.apply(SparkILoopInit.scala:122)
+        at org.apache.spark.repl.SparkIMain.beQuietDuring(SparkIMain.scala:270)
+        at org.apache.spark.repl.SparkILoopInit$class.initializeSpark(SparkILoopInit.scala:122)
+        at org.apache.spark.repl.SparkILoop.initializeSpark(SparkILoop.scala:60)
+        at org.apache.spark.repl.SparkILoop$$anonfun$process$1$$anonfun$apply$mcZ$sp$5.apply$mcV$sp(SparkILoop.scala:945)
+        at org.apache.spark.repl.SparkILoopInit$class.runThunks(SparkILoopInit.scala:147)
+        at org.apache.spark.repl.SparkILoop.runThunks(SparkILoop.scala:60)
+        at org.apache.spark.repl.SparkILoopInit$class.postInitialization(SparkILoopInit.scala:106)
+        at org.apache.spark.repl.SparkILoop.postInitialization(SparkILoop.scala:60)
+        at org.apache.spark.repl.SparkILoop$$anonfun$process$1.apply$mcZ$sp(SparkILoop.scala:962)
+        at org.apache.spark.repl.SparkILoop$$anonfun$process$1.apply(SparkILoop.scala:916)
+        at org.apache.spark.repl.SparkILoop$$anonfun$process$1.apply(SparkILoop.scala:916)
+        at scala.tools.nsc.util.ScalaClassLoader$.savingContextLoader(ScalaClassLoader.scala:135)
+        at org.apache.spark.repl.SparkILoop.process(SparkILoop.scala:916)
+        at org.apache.spark.repl.SparkILoop.process(SparkILoop.scala:1011)
+        at org.apache.spark.repl.Main$.main(Main.scala:31)
+        at org.apache.spark.repl.Main.main(Main.scala)
+        at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+        at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:57)
+        at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+        at java.lang.reflect.Method.invoke(Method.java:606)
+        at org.apache.spark.deploy.SparkSubmit$.launch(SparkSubmit.scala:358)
+        at org.apache.spark.deploy.SparkSubmit$.main(SparkSubmit.scala:75)
+        at org.apache.spark.deploy.SparkSubmit.main(SparkSubmit.scala)
+15/10/17 18:25:44 INFO handler.ContextHandler: stopped o.e.j.s.ServletContextHandler{/stages/stage/kill,null}
+15/10/17 18:25:44 INFO handler.ContextHandler: stopped o.e.j.s.ServletContextHandler{/,null}
+15/10/17 18:25:44 INFO handler.ContextHandler: stopped o.e.j.s.ServletContextHandler{/static,null}
+15/10/17 18:25:44 INFO handler.ContextHandler: stopped o.e.j.s.ServletContextHandler{/executors/threadDump/json,null}
+15/10/17 18:25:44 INFO handler.ContextHandler: stopped o.e.j.s.ServletContextHandler{/executors/threadDump,null}
+15/10/17 18:25:44 INFO handler.ContextHandler: stopped o.e.j.s.ServletContextHandler{/executors/json,null}
+15/10/17 18:25:44 INFO handler.ContextHandler: stopped o.e.j.s.ServletContextHandler{/executors,null}
+15/10/17 18:25:44 INFO handler.ContextHandler: stopped o.e.j.s.ServletContextHandler{/environment/json,null}
+15/10/17 18:25:44 INFO handler.ContextHandler: stopped o.e.j.s.ServletContextHandler{/environment,null}
+15/10/17 18:25:44 INFO handler.ContextHandler: stopped o.e.j.s.ServletContextHandler{/storage/rdd/json,null}
+15/10/17 18:25:44 INFO handler.ContextHandler: stopped o.e.j.s.ServletContextHandler{/storage/rdd,null}
+15/10/17 18:25:44 INFO handler.ContextHandler: stopped o.e.j.s.ServletContextHandler{/storage/json,null}
+15/10/17 18:25:44 INFO handler.ContextHandler: stopped o.e.j.s.ServletContextHandler{/storage,null}
+15/10/17 18:25:44 INFO handler.ContextHandler: stopped o.e.j.s.ServletContextHandler{/stages/pool/json,null}
+15/10/17 18:25:44 INFO handler.ContextHandler: stopped o.e.j.s.ServletContextHandler{/stages/pool,null}
+15/10/17 18:25:44 INFO handler.ContextHandler: stopped o.e.j.s.ServletContextHandler{/stages/stage/json,null}
+15/10/17 18:25:44 INFO handler.ContextHandler: stopped o.e.j.s.ServletContextHandler{/stages/stage,null}
+15/10/17 18:25:44 INFO handler.ContextHandler: stopped o.e.j.s.ServletContextHandler{/stages/json,null}
+15/10/17 18:25:44 INFO handler.ContextHandler: stopped o.e.j.s.ServletContextHandler{/stages,null}
+15/10/17 18:25:44 INFO handler.ContextHandler: stopped o.e.j.s.ServletContextHandler{/jobs/job/json,null}
+15/10/17 18:25:44 INFO handler.ContextHandler: stopped o.e.j.s.ServletContextHandler{/jobs/job,null}
+15/10/17 18:25:44 INFO handler.ContextHandler: stopped o.e.j.s.ServletContextHandler{/jobs/json,null}
+15/10/17 18:25:44 INFO handler.ContextHandler: stopped o.e.j.s.ServletContextHandler{/jobs,null}
+15/10/17 18:25:44 WARN util.Utils: Service 'SparkUI' could not bind on port 4049. Attempting port 4050.
+15/10/17 18:25:44 INFO server.Server: jetty-8.y.z-SNAPSHOT
+15/10/17 18:25:44 INFO server.AbstractConnector: Started SelectChannelConnector@0.0.0.0:4050
+15/10/17 18:25:44 INFO util.Utils: Successfully started service 'SparkUI' on port 4050.
+15/10/17 18:25:44 INFO ui.SparkUI: Started SparkUI at http://cs6360.utdallas.edu:4050
+15/10/17 18:25:45 INFO executor.Executor: Using REPL class URI: http://10.176.92.90:42213
+15/10/17 18:25:45 INFO util.AkkaUtils: Connecting to HeartbeatReceiver: akka.tcp://sparkDriver@cs6360.utdallas.edu:58021/user/HeartbeatReceiver
+15/10/17 18:25:45 INFO netty.NettyBlockTransferService: Server created on 51751
+15/10/17 18:25:45 INFO storage.BlockManagerMaster: Trying to register BlockManager
+15/10/17 18:25:45 INFO storage.BlockManagerMasterActor: Registering block manager localhost:51751 with 265.4 MB RAM, BlockManagerId(<driver>, localhost, 51751)
+15/10/17 18:25:45 INFO storage.BlockManagerMaster: Registered BlockManager
+15/10/17 18:25:45 INFO repl.SparkILoop: Created spark context..
+Spark context available as sc.
+
+scala>
+
+scala> val inputData = readLine("Enter the Address Location: ")
+Enter the Address Location: inputData: String = Stanford
+
+scala> var readDataFile = sc.textFile("/yelpdatafall/business/business.csv")
+15/10/17 18:26:35 INFO storage.MemoryStore: ensureFreeSpace(166036) called with curMem=0, maxMem=278302556
+15/10/17 18:26:35 INFO storage.MemoryStore: Block broadcast_0 stored as values in memory (estimated size 162.1 KB, free 265.3 MB)
+15/10/17 18:26:35 INFO storage.MemoryStore: ensureFreeSpace(23289) called with curMem=166036, maxMem=278302556
+15/10/17 18:26:35 INFO storage.MemoryStore: Block broadcast_0_piece0 stored as bytes in memory (estimated size 22.7 KB, free 265.2 MB)
+15/10/17 18:26:35 INFO storage.BlockManagerInfo: Added broadcast_0_piece0 in memory on localhost:51751 (size: 22.7 KB, free: 265.4 MB)
+15/10/17 18:26:35 INFO storage.BlockManagerMaster: Updated info of block broadcast_0_piece0
+15/10/17 18:26:35 INFO spark.SparkContext: Created broadcast 0 from textFile at <console>:12
+readDataFile: org.apache.spark.rdd.RDD[String] = /yelpdatafall/business/business.csv MappedRDD[1] at textFile at <console>:12
+
+scala> val outputQ1 = readDataFile.filter(line => line.contains(inputData)).map(a => a.split("\\^")).map(b => b(0)).collect.foreach(println)
+15/10/17 18:26:50 INFO mapred.FileInputFormat: Total input paths to process : 1
+15/10/17 18:26:50 INFO spark.SparkContext: Starting job: collect at <console>:16
+15/10/17 18:26:50 INFO scheduler.DAGScheduler: Got job 0 (collect at <console>:16) with 2 output partitions (allowLocal=false)
+15/10/17 18:26:50 INFO scheduler.DAGScheduler: Final stage: Stage 0(collect at <console>:16)
+15/10/17 18:26:50 INFO scheduler.DAGScheduler: Parents of final stage: List()
+15/10/17 18:26:50 INFO scheduler.DAGScheduler: Missing parents: List()
+15/10/17 18:26:50 INFO scheduler.DAGScheduler: Submitting Stage 0 (MappedRDD[4] at map at <console>:16), which has no missing parents
+15/10/17 18:26:50 INFO storage.MemoryStore: ensureFreeSpace(4664) called with curMem=189325, maxMem=278302556
+15/10/17 18:26:50 INFO storage.MemoryStore: Block broadcast_1 stored as values in memory (estimated size 4.6 KB, free 265.2 MB)
+15/10/17 18:26:50 INFO storage.MemoryStore: ensureFreeSpace(3012) called with curMem=193989, maxMem=278302556
+15/10/17 18:26:50 INFO storage.MemoryStore: Block broadcast_1_piece0 stored as bytes in memory (estimated size 2.9 KB, free 265.2 MB)
+15/10/17 18:26:50 INFO storage.BlockManagerInfo: Added broadcast_1_piece0 in memory on localhost:51751 (size: 2.9 KB, free: 265.4 MB)
+15/10/17 18:26:50 INFO storage.BlockManagerMaster: Updated info of block broadcast_1_piece0
+15/10/17 18:26:50 INFO spark.SparkContext: Created broadcast 1 from broadcast at DAGScheduler.scala:838
+15/10/17 18:26:50 INFO scheduler.DAGScheduler: Submitting 2 missing tasks from Stage 0 (MappedRDD[4] at map at <console>:16)
+15/10/17 18:26:50 INFO scheduler.TaskSchedulerImpl: Adding task set 0.0 with 2 tasks
+15/10/17 18:26:50 INFO scheduler.TaskSetManager: Starting task 0.0 in stage 0.0 (TID 0, localhost, ANY, 1315 bytes)
+15/10/17 18:26:50 INFO scheduler.TaskSetManager: Starting task 1.0 in stage 0.0 (TID 1, localhost, ANY, 1315 bytes)
+15/10/17 18:26:50 INFO executor.Executor: Running task 0.0 in stage 0.0 (TID 0)
+15/10/17 18:26:50 INFO executor.Executor: Running task 1.0 in stage 0.0 (TID 1)
+15/10/17 18:26:50 INFO rdd.HadoopRDD: Input split: hdfs://cshadoop1/yelpdatafall/business/business.csv:1486763+1486763
+15/10/17 18:26:50 INFO rdd.HadoopRDD: Input split: hdfs://cshadoop1/yelpdatafall/business/business.csv:0+1486763
+15/10/17 18:26:50 INFO Configuration.deprecation: mapred.tip.id is deprecated. Instead, use mapreduce.task.id
+15/10/17 18:26:50 INFO Configuration.deprecation: mapred.task.id is deprecated. Instead, use mapreduce.task.attempt.id
+15/10/17 18:26:50 INFO Configuration.deprecation: mapred.task.is.map is deprecated. Instead, use mapreduce.task.ismap
+15/10/17 18:26:50 INFO Configuration.deprecation: mapred.job.id is deprecated. Instead, use mapreduce.job.id
+15/10/17 18:26:50 INFO Configuration.deprecation: mapred.task.partition is deprecated. Instead, use mapreduce.task.partition
+15/10/17 18:26:51 INFO executor.Executor: Finished task 1.0 in stage 0.0 (TID 1). 7497 bytes result sent to driver
+15/10/17 18:26:51 INFO executor.Executor: Finished task 0.0 in stage 0.0 (TID 0). 7497 bytes result sent to driver
+15/10/17 18:26:51 INFO scheduler.TaskSetManager: Finished task 0.0 in stage 0.0 (TID 0) in 575 ms on localhost (1/2)
+15/10/17 18:26:51 INFO scheduler.TaskSetManager: Finished task 1.0 in stage 0.0 (TID 1) in 582 ms on localhost (2/2)
+15/10/17 18:26:51 INFO scheduler.TaskSchedulerImpl: Removed TaskSet 0.0, whose tasks have all completed, from pool
+15/10/17 18:26:51 INFO scheduler.DAGScheduler: Stage 0 (collect at <console>:16) finished in 0.623 s
+15/10/17 18:26:51 INFO scheduler.DAGScheduler: Job 0 finished: collect at <console>:16, took 0.753735 s
+PBqjmOB7Yjti3cFqy8-Ctw
+SGlowZEhllX_NqwQIpIzaQ
+PiiDzC9wPzfVA-xyTXC0GQ
+dTn4zWESE49YRd5Mox9MCg
+4soRFJ8cijXfCeWj7R5q4w
+2_u1MYw34yj_woFHk8DxAA
+-ar6SC9nUaam_KbOJOgn-A
+f_y0wlUALp8O95b3sKk7mQ
+VeiGa7h8p1I2yAIfgZjgtw
+aqmS1P71bWX2j8MFNAweBA
+zrN108VsXtdau1vBGmGarA
+iD6oJ4qcM3RDF4PzKkk7fA
+PuTHnd2I7mhZG28wQw8rVg
+9rdigHXd49AKYopcG9-Mnw
+Uu2E4BAKboSyNgVTbqdykA
+N93q6AtoyayMZa-x0sNqgg
+A9F5f4aXXkrGCnHR6s0eUQ
+BfS5Ec49hDTlLrbti--MYw
+ce0OlLhdpoxyMQE03Q98lQ
+_MbxQm1v7hevbFxHcw_BGA
+Q3ySKm3hzO7e135covNpMQ
+QnXYtRC5eXdxxTAyM6ZSUg
+SiBhiwJdO6ivfnMIDzOT9Q
+2t05Wbot3-yqN1DbfFMiYQ
+73Gb_mlpMyq6K34OhzUaXw
+PMzpHgD_D2YU8vj6n_kMpw
+UZ0adu-4hd27k-_URRdMbw
+kzV63tmirtI1La8-fPr03A
+szvwhj2QsblOU5yn3n2TLQ
+WWyaK9oskNOpjCsO6MA7Pw
+VMQv_BIaKyORO0YKaPzo3A
+3CU32j5m54UJg45DDkgEsw
+YmupeGDFKFLPfPUAe6aarQ
+F-FigR53J4BFf8fWIiH0rg
+vNxTvFz2cKLmoHVIfSzj0w
+zC5XpSAh0cojJzKsGTJnqg
+1JV7FTibyjS1qDSFNkzULg
+DywFslWJ0MtA2_yclVCRzw
+hpvJapB-wXY8XSYA2Gy6BQ
+mQSwnJ31A-fxscL8-0sXWg
+UbckQRPzwfwOOqa0ff38Aw
+0TENyqNmMVO_2AscKiVyAw
+T7o_W6z47U-z_jz3uNs1lQ
+z_qnPhLOX8JrdxstjXNIXg
+7YMucgUMJPJJshx-3jEbCQ
+MpsBUMr-9bwadTLU_MiPfA
+J0M99GCEe0EpxR1EX0bfdQ
+CFN9_awssn6eUIEzZ_iRFQ
+l-XKTRn_B6mUB0DjfukmBg
+2wJFyH9l0wwTaavB5rvMvQ
+DZntO-whEi638T56xuu7qg
+dV40IwZPi5Y3OIdnJwt3CQ
+3ScIVDdxk6C7gE5Nb2VS2w
+YVpwn2u1VObu5GkargONqw
+oBGHg3P-xbUiXBWtSCqHVw
+6Ibcl14x0qJCwiXEry2JPA
+W_26FTpQQ5UAq4mMcvg4zw
+llFGBap8myo5IZpKwxBQCQ
+nIjGkJnxzT_pAqsrrFnlfg
+UMFQfomM9P9gg62Id8qx3g
+TBFvJmsUw9zIVOOLjv00Tw
+rPEBinN7NEn8uosusvBarg
+2MJzSgwVK_IgqJ9y3XpaKQ
+ldDOufwpb4rwq8arTiVMnw
+JkF2Xd_q_jkDVVs0ky1xMw
+1UdClU8UuEvGmDVVCAfmFg
+Qxn26fUlD3e6QOgjt0T1nA
+bka4sTSaEv85RpIV-fVnhw
+DD81eepQIKpZjYo_yDNMdQ
+_bEUqBpMo-V8-6DCYBLWMA
+Oe9p5TT4dOhMIwJy368XIQ
+D8P3R9QhFcwzRGkEQl63_g
+gTZdJcQxEbCtnSNT3UdB2A
+RYRd7MHEsI7b-orETqPjww
+6pMyHRKEqBuyL6jnZLt3gQ
+lKsqazcNjIx_cOfp8MF7Pg
+cgjskfRh258evmpK3uW1rQ
+A54EK0U5TWj6Z59LIOjWWg
+Q9n8qQEI7b2xgRDITWlnwg
+hYIF36Iq282ozuX4spoS3A
+P-bJFW6jzbyj9KAHJ2S5ng
+LC-LmAoWew24eUMaM_Htuw
+ZBKb6KtAtkMi8FVR2R25kw
+4Rgujtbnv7gnRbYLttl4hg
+i2YHXPRskLAPd6P_h-nR1g
+iyUvPYxXko-YV_VTiOVJrA
+sdr9otdH1OYvjSSAUi3zqA
+GcFV0rr1rltB9yn3sIrIJg
+FIemA3IqyGAROQETernOlg
+fLrKiEbybnyhELdaN-x1Eg
+1w56McRPe0vXthUySkxIZA
+PRL7_9l0Zu7w1CpQEj0iEw
+Hbr1hqU5khD6txgSq2pATA
+XaEmygB_ZLhPuj0wVQYv_g
+bJm5G43Lh0RCAGfXq2_MiQ
+oaOhLSd0wLBh0TwDc4u1fg
+3vP-VDYjLyjI4Lyzck6ltA
+_L5khvEP5HrUe0yzaauChA
+r4HiEEbty-XaRlqa3t_OSQ
+xUM5U3O6QrxsDRegTSbc3Q
+UrC0hWIZDgyag0af1K9D3A
+613D5giAoCnDPIk8MMB3QA
+5x1Bh1gWd9Ennr2MOf7Ung
+_ZB2oxor7IbzOPJ2W1L6Mg
+VaB_8yHolDLc1vPw4dgTRA
+BC5Xm5HfcA4BdB91cFQm4g
+pupw0auDn9HGPG9RJoOyrw
+i1lIq1aEyPHw78NkYbK1WQ
+2oFme3IiUSSi0PdAJNBxwg
+SvAoaPwH19EUu6fvy-sB6Q
+pYZSx6aWjEnNhWnDsQG7mA
+Pkn8d1zxGOkYvyrypNfmxw
+yLgvMvFrjL0ogVNXfzZDMQ
+KgSUPZeROhlkhYzxd2g2eg
+Yb-ggbSvr5XpBoHY_mB8JA
+olrFYjKobULoH4-ZucnpTg
+8SkRnP_ynhWFielAppKGpg
+ZyEllxWUk5OglTfDtaySQg
+nxIDaZ2Yy8i-xEggheGt6Q
+XCj80OIBQnbBYIQz7PVP9Q
+WYZwMUaniKF2W-0nwUIbdQ
+jzp4CH2MgABM_4gVeVSTLw
+q0Of4zLZ-SUoMELf_MJg0A
+z69SZb8PpN2wyG1l3ZaAkw
+XO6V1_V6PXOpml8xoq6-YQ
+SuDLIUBq-D-kVdtTzWa1RQ
+teRyag6UsapzX66fC-7_Dg
+LPiz-ewJ8DCf5M2XDdSCPg
+DCecMr0KQlwIL525iquKRw
+l-tmPWjNRKYxAeV7-HojHw
+WFM3IOVIo8aOv6ubROXWAA
+Xf4GBcmZSNZAn8umQCapAw
+RKGUg0JBG7zp_80T7H04fw
+Xq1Mn2fyk9mDZ56PxZmtrw
+e6xZP8Rp41uelLn9ViBFRg
+0m_Ez6oXthfc57GYLTX0bQ
+tFWMrI-UXDFkOErvzyrtrQ
+QGQktGth_Yk_suJP5Dw_Pw
+5J9Uz4uy7iV_jodCXvTJcA
+ghgGZ9QuOeDXtch_5MHIZw
+lzIUZHaMiGJ1_fz3zr1gTA
+KG3Y2qyrru2SZxR_c5gHyg
+6TQ_OV6seq0B0k-Fgm6QOg
+6hfzW9oYtVdFC7HCpY8Mag
+B-YBNQtIxQ-ygSHlHGhhfg
+OlbvPoM5N3-4js8GGjtVWw
+u0Gma496VzTk2nunoU_Tzg
+KhzhIIKHTno6QkGcXBqhrQ
+ncEQCb2Wjk1XfxKxrQD2aQ
+5dalY4lEfs15NKlj7e1tVw
+pTTUqKB3TxaW43ElWl6aOQ
+7-EtgVCR2GEp4y8qlLGleA
+mcHhF9Cl6Epi14CFMXpRag
+HZ8d1hTLFhS4fwZuQcO6gA
+h71bg06SMf-noPTVT04LGA
+MuxPkW6IOBR26s8L9cpa9g
+0OTB4WuRzjSqCYXqsddpPQ
+kCmS6hELe6qmXF_TF9fNDQ
+22BTnoeHLZdq-6uQJ2wiZQ
+EUhH6r8AJz5XFLE-ZBrALg
+FXaCGAjZRYNqaYYcpMKrdQ
+fxMd85Szb_AGI9i0LtPnsw
+tJY4yAdBAqH3Kgks2tG7Lg
+rNJhNmwdw3ldyWsBLh29Yw
+B0Uv4DYgWNAXGrb_Thcbjw
+317zawTdht4_-6OaWyRBBw
+8ZLGLp6H94hUhhhiyiKWdw
+29j4821OQUVYrJL6NfFIhA
+EfleO7C8gt1_QFHw0b9x-A
+Z-Et0HLvhYLSBsxYFG_W-w
+D66ZMIr_iDfkyJb8kl2DxQ
+gUj0Qy4oRdbpIM3TItTehg
+jNumpugSUbF_XraDG2eQNA
+JN0Sf_2yNzzCOS5vBW3fTA
+stKDbxNkKFOBQHCZ3lxSFw
+axPZazfSZFnynOV52mbe2Q
+hvdsyOFGxgJFdd9dF1GrPQ
+JDcwjWk3sO28D-LY-4Zwwg
+nCiDHpSXRCeEdXFLjotO_A
+_EAxD-u__ZlIVAaPICCYSQ
+SPpt5JdIoVH89Ow6m0-gUg
+v6rFHRguWKUQaiMTc7b_jw
+45d-bwCF-N4Naj0LEY4sQg
+tmKLRQ9dylAWjmTGRtfdIA
+4r-ybm_E24td8FtwEn5Yqg
+SzPvCEYOOLdpcmwKRdDbeA
+i_uarBhVWmsBS6qTQ0UQHg
+boL-6bDJjzw7okoYwIVnBA
+zdghOUeDcqvCzm__QvrMgQ
+JaiNoQDcsoGMGFGCkgs89Q
+mMWPowWhaWGtKnmWQu59Bw
+7kDmnprC9ZK-KiMw0SV5yQ
+bIfaRGIXdFTTp6AM-Ci1gA
+v45v65K9ipmgqpqwZpgyFA
+sK5bPI-QDa1EYwVpBBBxfA
+wqA_y4lx5T-MXgVICCqWZQ
+FG4z3O85RCasTtqpdWDY2w
+d_IBp5wNVn5wDlNkblAL8w
+BXNa3b28Lm8zUXXhMUtSig
+lh4jNbeyVmtuFUmRZV5mDQ
+XYw2WKC0GWvKQhmfxNyiCw
+naLfI6DY2lbIr7zi7TVpVA
+QV61iBp41MEAJMQ7WKeQqA
+qUO7Wq-kP1HhlMyzi67rTg
+obf0-1LUT2UPlOZmMiG_HQ
+rUjVVHTHztQU2_tblQN5SA
+KT2W87neswnBxVQPjGlUag
+MwkmT8cYBBMV_c9KvoJSog
+DLaAK2VYMGd-vodPtp7aoA
+rXxdmPrrFBXMXnOIYwzzBg
+CFO9AibIRd5pPCSBNf1teQ
+5BM99_wiEmhh-fuero77Uw
+GqFwgMpqggQgYTco0AbEAg
+jFJTKbLh0wXFjUWJp4uZaw
+oeCFic-IbslrVwORri1qgA
+HZgnRq19XNjQA5QF_bBQHQ
+kCX913tNDOy_oCsI4-Ty_Q
+x1tVp-Id4b6ZVYi3rF34ug
+TnNM0hvm0E5Uf9pnbwjt1w
+84YW19TUTLKJGDOr8TmpGA
+G5JO2IlthrZ_SIxHTwGSvw
+yZZoDb2JmFgRv45Rk0NBkw
+I-cpw2WmYA72ggXOXTeUrQ
+CJ-UuJEEEWoSnfWsfbbeig
+vcK6oZ2tAniie5Zt3ympXQ
+1clAYYFcac_V5jkoATbnRA
+eeJgvHuazd6SqRnQQGqf8g
+TYZh2VnS9P6eJaHmUuRJQA
+-9i9g4HKGPpZEV3Xa55nwg
+viiKRWphCo8u5LWEtzlCmg
+PBqjmOB7Yjti3cFqy8-Ctw
+SGlowZEhllX_NqwQIpIzaQ
+PiiDzC9wPzfVA-xyTXC0GQ
+dTn4zWESE49YRd5Mox9MCg
+4soRFJ8cijXfCeWj7R5q4w
+2_u1MYw34yj_woFHk8DxAA
+-ar6SC9nUaam_KbOJOgn-A
+f_y0wlUALp8O95b3sKk7mQ
+VeiGa7h8p1I2yAIfgZjgtw
+aqmS1P71bWX2j8MFNAweBA
+zrN108VsXtdau1vBGmGarA
+iD6oJ4qcM3RDF4PzKkk7fA
+PuTHnd2I7mhZG28wQw8rVg
+9rdigHXd49AKYopcG9-Mnw
+Uu2E4BAKboSyNgVTbqdykA
+N93q6AtoyayMZa-x0sNqgg
+A9F5f4aXXkrGCnHR6s0eUQ
+BfS5Ec49hDTlLrbti--MYw
+ce0OlLhdpoxyMQE03Q98lQ
+_MbxQm1v7hevbFxHcw_BGA
+Q3ySKm3hzO7e135covNpMQ
+QnXYtRC5eXdxxTAyM6ZSUg
+SiBhiwJdO6ivfnMIDzOT9Q
+2t05Wbot3-yqN1DbfFMiYQ
+73Gb_mlpMyq6K34OhzUaXw
+PMzpHgD_D2YU8vj6n_kMpw
+UZ0adu-4hd27k-_URRdMbw
+kzV63tmirtI1La8-fPr03A
+szvwhj2QsblOU5yn3n2TLQ
+WWyaK9oskNOpjCsO6MA7Pw
+VMQv_BIaKyORO0YKaPzo3A
+3CU32j5m54UJg45DDkgEsw
+YmupeGDFKFLPfPUAe6aarQ
+F-FigR53J4BFf8fWIiH0rg
+vNxTvFz2cKLmoHVIfSzj0w
+zC5XpSAh0cojJzKsGTJnqg
+1JV7FTibyjS1qDSFNkzULg
+DywFslWJ0MtA2_yclVCRzw
+hpvJapB-wXY8XSYA2Gy6BQ
+mQSwnJ31A-fxscL8-0sXWg
+UbckQRPzwfwOOqa0ff38Aw
+0TENyqNmMVO_2AscKiVyAw
+T7o_W6z47U-z_jz3uNs1lQ
+z_qnPhLOX8JrdxstjXNIXg
+7YMucgUMJPJJshx-3jEbCQ
+MpsBUMr-9bwadTLU_MiPfA
+J0M99GCEe0EpxR1EX0bfdQ
+CFN9_awssn6eUIEzZ_iRFQ
+l-XKTRn_B6mUB0DjfukmBg
+2wJFyH9l0wwTaavB5rvMvQ
+DZntO-whEi638T56xuu7qg
+dV40IwZPi5Y3OIdnJwt3CQ
+3ScIVDdxk6C7gE5Nb2VS2w
+YVpwn2u1VObu5GkargONqw
+oBGHg3P-xbUiXBWtSCqHVw
+6Ibcl14x0qJCwiXEry2JPA
+W_26FTpQQ5UAq4mMcvg4zw
+llFGBap8myo5IZpKwxBQCQ
+nIjGkJnxzT_pAqsrrFnlfg
+UMFQfomM9P9gg62Id8qx3g
+TBFvJmsUw9zIVOOLjv00Tw
+rPEBinN7NEn8uosusvBarg
+2MJzSgwVK_IgqJ9y3XpaKQ
+ldDOufwpb4rwq8arTiVMnw
+JkF2Xd_q_jkDVVs0ky1xMw
+1UdClU8UuEvGmDVVCAfmFg
+Qxn26fUlD3e6QOgjt0T1nA
+bka4sTSaEv85RpIV-fVnhw
+DD81eepQIKpZjYo_yDNMdQ
+_bEUqBpMo-V8-6DCYBLWMA
+Oe9p5TT4dOhMIwJy368XIQ
+D8P3R9QhFcwzRGkEQl63_g
+gTZdJcQxEbCtnSNT3UdB2A
+RYRd7MHEsI7b-orETqPjww
+6pMyHRKEqBuyL6jnZLt3gQ
+lKsqazcNjIx_cOfp8MF7Pg
+cgjskfRh258evmpK3uW1rQ
+A54EK0U5TWj6Z59LIOjWWg
+Q9n8qQEI7b2xgRDITWlnwg
+hYIF36Iq282ozuX4spoS3A
+P-bJFW6jzbyj9KAHJ2S5ng
+LC-LmAoWew24eUMaM_Htuw
+ZBKb6KtAtkMi8FVR2R25kw
+4Rgujtbnv7gnRbYLttl4hg
+i2YHXPRskLAPd6P_h-nR1g
+iyUvPYxXko-YV_VTiOVJrA
+sdr9otdH1OYvjSSAUi3zqA
+GcFV0rr1rltB9yn3sIrIJg
+FIemA3IqyGAROQETernOlg
+fLrKiEbybnyhELdaN-x1Eg
+1w56McRPe0vXthUySkxIZA
+PRL7_9l0Zu7w1CpQEj0iEw
+Hbr1hqU5khD6txgSq2pATA
+XaEmygB_ZLhPuj0wVQYv_g
+bJm5G43Lh0RCAGfXq2_MiQ
+oaOhLSd0wLBh0TwDc4u1fg
+3vP-VDYjLyjI4Lyzck6ltA
+_L5khvEP5HrUe0yzaauChA
+r4HiEEbty-XaRlqa3t_OSQ
+xUM5U3O6QrxsDRegTSbc3Q
+UrC0hWIZDgyag0af1K9D3A
+613D5giAoCnDPIk8MMB3QA
+5x1Bh1gWd9Ennr2MOf7Ung
+_ZB2oxor7IbzOPJ2W1L6Mg
+VaB_8yHolDLc1vPw4dgTRA
+BC5Xm5HfcA4BdB91cFQm4g
+pupw0auDn9HGPG9RJoOyrw
+i1lIq1aEyPHw78NkYbK1WQ
+2oFme3IiUSSi0PdAJNBxwg
+SvAoaPwH19EUu6fvy-sB6Q
+pYZSx6aWjEnNhWnDsQG7mA
+Pkn8d1zxGOkYvyrypNfmxw
+yLgvMvFrjL0ogVNXfzZDMQ
+KgSUPZeROhlkhYzxd2g2eg
+Yb-ggbSvr5XpBoHY_mB8JA
+olrFYjKobULoH4-ZucnpTg
+8SkRnP_ynhWFielAppKGpg
+ZyEllxWUk5OglTfDtaySQg
+nxIDaZ2Yy8i-xEggheGt6Q
+XCj80OIBQnbBYIQz7PVP9Q
+WYZwMUaniKF2W-0nwUIbdQ
+jzp4CH2MgABM_4gVeVSTLw
+q0Of4zLZ-SUoMELf_MJg0A
+z69SZb8PpN2wyG1l3ZaAkw
+XO6V1_V6PXOpml8xoq6-YQ
+SuDLIUBq-D-kVdtTzWa1RQ
+teRyag6UsapzX66fC-7_Dg
+LPiz-ewJ8DCf5M2XDdSCPg
+DCecMr0KQlwIL525iquKRw
+l-tmPWjNRKYxAeV7-HojHw
+WFM3IOVIo8aOv6ubROXWAA
+Xf4GBcmZSNZAn8umQCapAw
+RKGUg0JBG7zp_80T7H04fw
+Xq1Mn2fyk9mDZ56PxZmtrw
+e6xZP8Rp41uelLn9ViBFRg
+0m_Ez6oXthfc57GYLTX0bQ
+tFWMrI-UXDFkOErvzyrtrQ
+QGQktGth_Yk_suJP5Dw_Pw
+5J9Uz4uy7iV_jodCXvTJcA
+ghgGZ9QuOeDXtch_5MHIZw
+lzIUZHaMiGJ1_fz3zr1gTA
+KG3Y2qyrru2SZxR_c5gHyg
+6TQ_OV6seq0B0k-Fgm6QOg
+6hfzW9oYtVdFC7HCpY8Mag
+B-YBNQtIxQ-ygSHlHGhhfg
+OlbvPoM5N3-4js8GGjtVWw
+u0Gma496VzTk2nunoU_Tzg
+KhzhIIKHTno6QkGcXBqhrQ
+ncEQCb2Wjk1XfxKxrQD2aQ
+5dalY4lEfs15NKlj7e1tVw
+pTTUqKB3TxaW43ElWl6aOQ
+7-EtgVCR2GEp4y8qlLGleA
+mcHhF9Cl6Epi14CFMXpRag
+HZ8d1hTLFhS4fwZuQcO6gA
+h71bg06SMf-noPTVT04LGA
+MuxPkW6IOBR26s8L9cpa9g
+0OTB4WuRzjSqCYXqsddpPQ
+kCmS6hELe6qmXF_TF9fNDQ
+22BTnoeHLZdq-6uQJ2wiZQ
+EUhH6r8AJz5XFLE-ZBrALg
+FXaCGAjZRYNqaYYcpMKrdQ
+fxMd85Szb_AGI9i0LtPnsw
+tJY4yAdBAqH3Kgks2tG7Lg
+rNJhNmwdw3ldyWsBLh29Yw
+B0Uv4DYgWNAXGrb_Thcbjw
+317zawTdht4_-6OaWyRBBw
+8ZLGLp6H94hUhhhiyiKWdw
+29j4821OQUVYrJL6NfFIhA
+EfleO7C8gt1_QFHw0b9x-A
+Z-Et0HLvhYLSBsxYFG_W-w
+D66ZMIr_iDfkyJb8kl2DxQ
+gUj0Qy4oRdbpIM3TItTehg
+jNumpugSUbF_XraDG2eQNA
+JN0Sf_2yNzzCOS5vBW3fTA
+stKDbxNkKFOBQHCZ3lxSFw
+axPZazfSZFnynOV52mbe2Q
+hvdsyOFGxgJFdd9dF1GrPQ
+JDcwjWk3sO28D-LY-4Zwwg
+nCiDHpSXRCeEdXFLjotO_A
+_EAxD-u__ZlIVAaPICCYSQ
+SPpt5JdIoVH89Ow6m0-gUg
+v6rFHRguWKUQaiMTc7b_jw
+45d-bwCF-N4Naj0LEY4sQg
+tmKLRQ9dylAWjmTGRtfdIA
+4r-ybm_E24td8FtwEn5Yqg
+SzPvCEYOOLdpcmwKRdDbeA
+i_uarBhVWmsBS6qTQ0UQHg
+boL-6bDJjzw7okoYwIVnBA
+zdghOUeDcqvCzm__QvrMgQ
+JaiNoQDcsoGMGFGCkgs89Q
+mMWPowWhaWGtKnmWQu59Bw
+7kDmnprC9ZK-KiMw0SV5yQ
+bIfaRGIXdFTTp6AM-Ci1gA
+v45v65K9ipmgqpqwZpgyFA
+sK5bPI-QDa1EYwVpBBBxfA
+wqA_y4lx5T-MXgVICCqWZQ
+FG4z3O85RCasTtqpdWDY2w
+d_IBp5wNVn5wDlNkblAL8w
+BXNa3b28Lm8zUXXhMUtSig
+lh4jNbeyVmtuFUmRZV5mDQ
+XYw2WKC0GWvKQhmfxNyiCw
+naLfI6DY2lbIr7zi7TVpVA
+QV61iBp41MEAJMQ7WKeQqA
+qUO7Wq-kP1HhlMyzi67rTg
+obf0-1LUT2UPlOZmMiG_HQ
+rUjVVHTHztQU2_tblQN5SA
+KT2W87neswnBxVQPjGlUag
+MwkmT8cYBBMV_c9KvoJSog
+DLaAK2VYMGd-vodPtp7aoA
+rXxdmPrrFBXMXnOIYwzzBg
+CFO9AibIRd5pPCSBNf1teQ
+5BM99_wiEmhh-fuero77Uw
+GqFwgMpqggQgYTco0AbEAg
+jFJTKbLh0wXFjUWJp4uZaw
+oeCFic-IbslrVwORri1qgA
+HZgnRq19XNjQA5QF_bBQHQ
+kCX913tNDOy_oCsI4-Ty_Q
+x1tVp-Id4b6ZVYi3rF34ug
+TnNM0hvm0E5Uf9pnbwjt1w
+84YW19TUTLKJGDOr8TmpGA
+G5JO2IlthrZ_SIxHTwGSvw
+yZZoDb2JmFgRv45Rk0NBkw
+I-cpw2WmYA72ggXOXTeUrQ
+CJ-UuJEEEWoSnfWsfbbeig
+vcK6oZ2tAniie5Zt3ympXQ
+1clAYYFcac_V5jkoATbnRA
+eeJgvHuazd6SqRnQQGqf8g
+TYZh2VnS9P6eJaHmUuRJQA
+-9i9g4HKGPpZEV3Xa55nwg
+viiKRWphCo8u5LWEtzlCmg
+outputQ1: Unit = ()
+
+scala>

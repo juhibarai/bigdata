@@ -1,0 +1,111 @@
+
+CASSANDRA COMMANDS
+
+
+QUESTION - 5
+
+To start Cassandra - 
+{cs6360:~} 
+/usr/local/apache-cassandra-2.0.5/bin/cqlsh csac0
+
+//Creating Keyspace-
+CREATE KEYSPACE jkb140130 WITH REPLICATION = {'class' :'SimpleStrategy', 'replication_factor' : 1};
+
+//use keyspace
+USE jkb140130;
+
+
+Part 5.1.
+
+CREATE TABLE jbcassbus(
+business_id varchar,
+full_address varchar,
+categories text, 
+PRIMARY KEY (business_id));
+
+
+Part 5.2.
+
+COPY jbcassbus(business_id, full_address, categories) FROM 'bnew.csv' WITH DELIMITER='^';
+
+
+Part 5.3.
+
+SELECT * FROM jbcassbus where business_id='HPWmjuivv3xJ279qSVfNaQ';
+
+
+Part 5.4.
+
+TRUNCATE jbcassbus;
+
+
+Part 5.5.
+
+DROP TABLE jbcassbus;
+
+
+
+
+QUESTION - 6
+
+To start Cassandra - 
+{cs6360:~} 
+/usr/local/apache-cassandra-2.0.5/bin/cqlsh csac0
+
+//Creating Keyspace-
+CREATE KEYSPACE jkb140130 WITH REPLICATION = {'class' :'SimpleStrategy', 'replication_factor' : 1};
+
+//use keyspace
+USE jkb140130;
+
+
+Part 6.1.
+
+CREATE TABLE juhireview (
+  review_id text,   
+  user_id text,
+  business_id text,
+  stars decimal,
+ PRIMARY KEY ((review_id,user_id,business_id),stars)
+)
+WITH CLUSTERING ORDER BY (stars DESC);
+
+
+COPY juhireview(review_id,user_id,business_id,stars) FROM 'review.csv' WITH DELIMITER='^';
+
+
+Part 6.2.
+
+CREATE INDEX stars_index on review(stars);
+
+
+Part 6.3.
+
+SELECT * from juhireview WHERE stars_index=4.0  LIMIT 10;
+
+
+Part 6.4.
+
+TRUNCATE juhireview; 
+
+
+Part 6.5.
+
+DROP TABLE juhireview;
+
+
+
+
+QUESTION - 7
+
+/usr/local/apache-cassandra-2.0.5/bin/nodetool -h csac0 ring  jkb140130 ;
+/usr/local/apache-cassandra-2.0.5/bin/nodetool -h csac0 status jkb140130;
+
+/usr/local/apache-cassandra-2.0.5/bin/nodetool -h csac1 ring  jkb140130 ;
+/usr/local/apache-cassandra-2.0.5/bin/nodetool -h csac1 status jkb140130;
+
+/usr/local/apache-cassandra-2.0.5/bin/nodetool -h csac2 ring  jkb140130 ;
+/usr/local/apache-cassandra-2.0.5/bin/nodetool -h csac2 status jkb140130;
+
+/usr/local/apache-cassandra-2.0.5/bin/nodetool -h csac3 ring  jkb140130 ;
+/usr/local/apache-cassandra-2.0.5/bin/nodetool -h csac3 status jkb140130;

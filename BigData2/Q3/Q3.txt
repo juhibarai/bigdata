@@ -1,0 +1,73 @@
+
+Question 3.a
+
+
+
+var businessdata= sc.textFile("/yelpdatafall/business/business.csv").map(l => l.split("\\^")).map(l => (l(0),(l(1),l(2))))
+
+var reviewdata = sc.textFile("/yelpdatafall/review/review.csv")
+
+var reviewdatamap = reviewdata.map(a => a.split("\\^")).map(a => (a(2),a(3).toDouble)).groupByKey()
+
+
+def functavg[T]( a: Iterable[T] )( implicit num: Numeric[T] ) = {
+     num.toDouble( a.sum ) / a.size
+     }     	
+val r = reviewdatamap.map(x => (x._1, functavg(x._2))).sortByKey()
+val r2 = r.map(x => (x._2, x._1)). top(10).map(x=>(x._2,x._1))
+var outputq3a = sc.parallelize(r2)
+businessdata.join(outputq3a).collect().foreach(println)
+
+Time taken - 0.781282 s
+
+
+
+Question 3.b
+
+
+var businessdata= sc.textFile("/yelpdatafall/business/business.csv").map(l => l.split("\\^")).map(l => (l(0),(l(1),l(2))))
+
+var reviewdata = sc.textFile("/yelpdatafall/review/review.csv")
+
+var reviewdatamap = reviewdata.map(a => a.split("\\^")).map(a => (a(2),a(3).toDouble)).groupByKey()
+
+
+def functavg[T]( a: Iterable[T] )( implicit num: Numeric[T] ) = {
+     num.toDouble( a.sum ) / a.size
+     }     	
+
+
+val r = reviewdatamap.map(l => (x._1, functavg(x._2))).sortByKey()
+
+val r2 = r.map(x => (x._2, x._1)). top(10).map(x=>(x._2,x._1))
+
+var outputbroadcastvariable = sc.broadcast(r2)
+
+businessdata.map{j => if(outputbroadcastvariable.value.contains(j._1)) j else None}.filter(j=>j!=(None)).collect().foreach(println)
+
+Time taken by broadcast variable- 0.371728 s
+
+
+
+OUTPUT
+
+(ztswDToyZGyL_dxo0CEQew,((200 W SenecaIthaca, NY 14850,List(Food, Ice Cream & Frozen Yogurt)),5.0))
+(ztswDToyZGyL_dxo0CEQew,((200 W SenecaIthaca, NY 14850,List(Food, Ice Cream & Frozen Yogurt)),5.0))
+(zh2Eja5h54vM7GUibHoi9A,((275 Westminster StDownCityProvidence, RI 02903,List(Art Supplies, Shopping, Arts & Crafts)),5.0))
+(zh2Eja5h54vM7GUibHoi9A,((275 Westminster StDownCityProvidence, RI 02903,List(Art Supplies, Shopping, Arts & Crafts)),5.0))
+(zkD9AtBT9ZkLFiV31gvEGw,((194 Waterman St3rd FlProvidence, RI 02906,List(Massage, Beauty and Spas)),5.0))
+(zkD9AtBT9ZkLFiV31gvEGw,((194 Waterman St3rd FlProvidence, RI 02906,List(Massage, Beauty and Spas)),5.0))
+(zrmO-d-Mw3kv9dWa7Trr9Q,((1101 Welch RdSte A1Palo Alto, CA 94304,List(Doctors, Health and Medical, Pediatricians)),5.0))
+(zrmO-d-Mw3kv9dWa7Trr9Q,((1101 Welch RdSte A1Palo Alto, CA 94304,List(Doctors, Health and Medical, Pediatricians)),5.0))
+(zx1lLUvlRUN5nQlSj3HRDw,((282 River StTroy, NY 12180,List(Shopping, Antiques)),5.0))
+(zx1lLUvlRUN5nQlSj3HRDw,((282 River StTroy, NY 12180,List(Shopping, Antiques)),5.0))
+(zqZjrcTf9Bc7r_VLGN4mrw,((1734 Elton Rd Ste 104Silver Spring, MD 20903,List(Doctors, Ear Nose & Throat, Health and Medical)),5.0))
+(zqZjrcTf9Bc7r_VLGN4mrw,((1734 Elton Rd Ste 104Silver Spring, MD 20903,List(Doctors, Ear Nose & Throat, Health and Medical)),5.0))
+(ziS_fZ7Z99fa4qNVr879vg,((141 The CommonsSte 3Ithaca, NY 14850,List(Day Spas, Massage, Beauty and Spas)),5.0))
+(ziS_fZ7Z99fa4qNVr879vg,((141 The CommonsSte 3Ithaca, NY 14850,List(Day Spas, Massage, Beauty and Spas)),5.0))
+(zh-MNFY4TyG7x2itUVlESQ,((University DistrictSeattle, WA 98145,List(Home Services, Home Inspectors)),5.0))
+(zh-MNFY4TyG7x2itUVlESQ,((University DistrictSeattle, WA 98145,List(Home Services, Home Inspectors)),5.0))
+(zweAzZDJ8SfwUID1UEGkbA,((701 Main StLafayette, IN 47901,List(Local Services, Printing Services)),5.0))
+(zweAzZDJ8SfwUID1UEGkbA,((701 Main StLafayette, IN 47901,List(Local Services, Printing Services)),5.0))
+(zvo21oKr656PQNVblYxYlg,((150 E Tenth StClaremont, CA 91711,List(Colleges & Universities, Education)),5.0))
+(zvo21oKr656PQNVblYxYlg,((150 E Tenth StClaremont, CA 91711,List(Colleges & Universities, Education)),5.0))

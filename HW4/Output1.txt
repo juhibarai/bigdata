@@ -1,0 +1,59 @@
+
+Output 1
+
+Cluster 8
+(2091,Return from Witch Mountain (1978)  , Children's|Sci-Fi)
+(1949,Man for All Seasons, A (1966)  , Drama)
+(1990,Prom Night IV: Deliver Us From Evil (1992)  , Horror)
+(1993,Child's Play 3 (1992)  , Horror)
+(1997,Exorcist, The (1973)  , Horror)
+ Cluster 4
+(2985,Robocop (1987)  , Action|Crime|Sci-Fi)
+(2987,Who Framed Roger Rabbit? (1988)  , Adventure|Animation|Film-Noir)
+(3020,Falling Down (1993)  , Action|Drama)
+(3022,General, The (1927)  , Comedy)
+(3024,Piranha (1978)  , Horror|Sci-Fi)
+  Cluster 2
+(3800,Criminal Lovers (Les Amants Criminels) (1999)  , Drama|Romance)
+(3801,Anatomy of a Murder (1959)  , Drama|Mystery)
+(3802,Freejack (1992)  , Action|Sci-Fi)
+(3803,Greaser's Palace (1972)  , Drama)
+(3806,MacKenna's Gold (1969)  , Western)
+  Cluster 5
+(3626,8 1/2 Women (1999)  , Comedy)
+(3659,Quatermass II (1957)  , Sci-Fi|Thriller)
+(3684,Fabulous Baker Boys, The (1989)  , Drama|Romance)
+(3685,Prizzi's Honor (1985)  , Comedy|Drama|Romance)
+(3710,Action Jackson (1988)  , Action|Comedy)
+  Cluster 7
+(3819,Tampopo (1986)  , Comedy)
+  Cluster No 1
+(3312,McCullochs, The (1975)  , Drama)
+(3331,My Tutor (1983)  , Drama)
+(3334,Key Largo (1948)  , Crime|Drama|Film-Noir|Thriller)
+(3338,For All Mankind (1989)  , Documentary)
+(3339,Cross of Iron (1977)  , War)
+Cluster 3
+(1230,Annie Hall (1977)  , Comedy|Romance)
+(1231,Right Stuff, The (1983)  , Drama)
+(1232,Stalker (1979)  , Mystery|Sci-Fi)
+(1233,Boat, The (Das Boot) (1981)  , Action|Drama|War)
+(1238,Local Hero (1983)  , Comedy)
+  Cluster 9
+(1393,Jerry Maguire (1996)  , Drama|Romance)
+(1630,Lay of the Land, The (1997)  , Comedy|Drama)
+(1703,For Richer or Poorer (1997)  , Comedy)
+(1704,Good Will Hunting (1997)  , Drama)
+(1707,Home Alone 3 (1997)  , Children's|Comedy)
+  Cluster 6
+(2487,Blood, Guts, Bullets and Octane (1998)  , Action|Comedy)
+(2830,Cabaret Balkan (Bure Baruta) (1998)  , Drama)
+(2834,Very Thought of You, The (1998)  , Comedy|Romance)
+(2856,I Saw What You Did (1965)  , Thriller)
+(2857,Yellow Submarine (1968)  , Animation|Musical)
+  Cluster 0
+(431,Carlito's Way (1993)  , Crime|Drama)
+(432,City Slickers II: The Legend of Curly's Gold (1994)  , Comedy|Western)
+(433,Clean Slate (1994)  , Comedy)
+(434,Cliffhanger (1993)  , Action|Adventure|Crime)
+(435,Coneheads (1993)  , Comedy|Sci-Fi)

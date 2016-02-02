@@ -1,0 +1,59 @@
+
+
+PIG COMMANDS
+
+
+QUESTION - 1
+
+
+businessfile = load '/jkb140130/businessfile1' USING PigStorage('^') AS (bus_id:chararray,address:chararray,categories:chararray);
+loc = FILTER businessfile by(address matches'.*CA.*');
+reviewfile = load '/jkb140130/reviewfile' USING PigStorage('^') AS (rev_id:chararray,user_id:chararray,bus_id:chararray,stars:float);
+joinca = JOIN loc by bus_id, reviewfile by bus_id;
+revgroup = GROUP reviewfile by bus_id;
+stars_avg = FOREACH revgroup generate group as bus_id, AVG($1.stars) AS avg_ratings;
+bus_rev = JOIN loc by bus_id, stars_avg by bus_id;
+filter_br = FILTER bus_rev by  address is not null and  categories is not null;
+sorted_bid = ORDER filter_br by avg_ratings DESC;
+toplimit = LIMIT sorted_bid 10;
+store toplimit  into  '/jkb140130/pigqone' USING PigStorage (':'); 
+quit
+
+
+
+
+QUESTION - 2 
+
+businessfile= load '/jkb140130/businessfile1' USING PigStorage('^') AS (bus_id:chararray,address:chararray,categories:chararray);
+loc = FILTER businessfile by NOT (address matches'.*CA.*');
+reviewfile = load '/jkb140130/reviewfile' USING PigStorage('^') AS (rev_id:chararray,user_id:chararray,bus_id:chararray,stars:float);
+joined= JOIN loc by bus_id, reviewfile by bus_id;
+revgroup = GROUP reviewfile by bus_id;
+stars_avg = FOREACH revgroup generate group as bus_id, AVG($1.stars) AS avg_ratings;
+bus_rev = JOIN loc by bus_id, stars_avg by bus_id;
+filter_br = FILTER bus_rev by  address is not null and  categories is not null;
+sorted_bid = ORDER filter_br by avg_ratings DESC;
+toplimit = LIMIT sorted_bid 10;
+store toplimit  into  '/jkb140130/pigqtwo' USING PigStorage (':'); 
+quit
+
+
+QUESTION - 3
+
+businessfile1= load '/jkb140130/businessfile1' USING PigStorage('^') AS (bus_id:chararray,address:chararray,categories:chararray);
+review = load '/jkb140130/reviewfile' USING PigStorage('^') AS (rev_id:chararray,user_id:chararray,bus_id:chararray,stars:float);
+br_cogroup = COGROUP businessfile1 by bus_id,review by bus_id;
+top5 = LIMIT br_cogroup 5;
+store top5  into  '/jkb140130/pigqthree' USING PigStorage (':'); 
+
+
+QUESTION - 4
+
+bussinessfile1= load '/jkb140130/businessfile1' USING PigStorage('^') AS (bus_id:chararray,address:chararray,categories:chararray);
+loc = FILTER bussinessfile1 by NOT (address matches'.*CA.*');
+review = load '/jkb140130/review' USING PigStorage('^') AS (rev_id:chararray,user_id:chararray,bus_id:chararray,stars:float);
+br_cogroup = COGROUP review by bus_id INNER , loc by bus_id;
+top5 = LIMIT br_cogroup 5;
+rowjoin= FOREACH top5 GENERATE FLATTEN(review),FLATTEN(loc);
+result = LIMIT rowjoin 5;
+store result  into  '/jkb140130/pigqfour' USING PigStorage (':'); 
